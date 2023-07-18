@@ -1,0 +1,4 @@
+
+# Ignore files in directories named unversioned
+**/unversioned/**
+**/.DS_Store
