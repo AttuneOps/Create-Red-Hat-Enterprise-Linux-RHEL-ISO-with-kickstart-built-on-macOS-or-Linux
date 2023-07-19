@@ -54,7 +54,7 @@ This Project contains the following Blueprints.
 
 
 
-### Create RHEL8 Kickstart ISO
+### Create RHEL8 BIOS Kickstart ISO
 
 Creates a RHEL8 kickstart ISO.
 

@@ -4,7 +4,7 @@
     "enabled": true, 
     "externalUuid4": "42364060-92fd-434e-a244-fe0b9ad48c70", 
     "isBlueprint": true, 
-    "key": "createrhel8kickstartiso", 
+    "key": "createrhel8bioskickstartiso", 
     "links": [
         {
             "order": 50, 
@@ -27,6 +27,6 @@
             "stepKey": "createbiosbootiso"
         }
     ], 
-    "name": "Create RHEL8 Kickstart ISO", 
+    "name": "Create RHEL8 BIOS Kickstart ISO", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

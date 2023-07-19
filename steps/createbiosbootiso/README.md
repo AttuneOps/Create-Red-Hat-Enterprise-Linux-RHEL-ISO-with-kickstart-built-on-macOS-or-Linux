@@ -1,0 +1,1 @@
+Creates a BIOS bootable ISO containing the kickstart files.
