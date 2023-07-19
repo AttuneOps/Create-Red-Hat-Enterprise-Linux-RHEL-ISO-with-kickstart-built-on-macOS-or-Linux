@@ -1,0 +1,1 @@
+Creates a RHEL8 kickstart ISO.

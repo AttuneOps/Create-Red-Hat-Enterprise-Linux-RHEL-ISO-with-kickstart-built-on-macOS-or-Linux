@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "f7aaac89-cbdb-4501-940c-96b7fddabf57", 
+    "interpreter": 1, 
+    "key": "createbiosbootiso", 
+    "name": "Create BIOS Boot ISO", 
+    "osCredKey": "linuxattuneuser", 
+    "serverKey": "attuneosbuildserver", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}
