@@ -1,4 +1,4 @@
-cd {ksVmwareAttuneBaseDir}/build-{targetServer.fqn}
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
 
 ISO="$(echo rhel*iso)"
 echo "ISO is $ISO"

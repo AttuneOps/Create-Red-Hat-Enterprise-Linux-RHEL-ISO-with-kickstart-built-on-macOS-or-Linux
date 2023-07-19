@@ -341,7 +341,7 @@ ssh {linuxattuneuser}@{attuneosbuildserver}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{ksVmwareAttuneBaseDir}/build-{targetServer.fqn}&quot;
+DIR=&quot;{ksAttuneBaseDir}/build-{targetServer.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
@@ -349,7 +349,7 @@ else
     echo &quot;No directory to remove.&quot;
 fi
 
-ISO=&quot;{ksVmwareAttuneBaseDir}/kickstart_{targetServer.fqn}.iso&quot;
+ISO=&quot;{ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso&quot;
 if [ -f &quot;${ISO}&quot; ]
 then
     rm -fv &quot;${ISO}&quot;
@@ -412,7 +412,7 @@ fi
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{ksVmwareAttuneBaseDir}/build-{targetServer.fqn}, relative to the home directory
+{ksAttuneBaseDir}/build-{targetServer.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -462,7 +462,7 @@ fi
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {ksVmwareAttuneBaseDir}/build-{targetServer.fqn}
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
 
 ISO=&quot;$(echo rhel*iso)&quot;
 echo &quot;ISO is $ISO&quot;
@@ -525,7 +525,7 @@ rm -v &quot;${ISO}&quot;
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{ksVmwareAttuneBaseDir}/build-{targetServer.fqn}, relative to the home directory
+{ksAttuneBaseDir}/build-{targetServer.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -575,9 +575,9 @@ rm -v &quot;${ISO}&quot;
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {ksVmwareAttuneBaseDir}/build-{targetServer.fqn}
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
 
-mkisofs -o {ksVmwareAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
+mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V &quot;KS_RHEL&quot; .
                 </code>

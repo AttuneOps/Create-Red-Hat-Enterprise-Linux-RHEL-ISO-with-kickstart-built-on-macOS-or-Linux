@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel88bootiso", 
-    "deployPath": "{ksVmwareAttuneBaseDir}/build-{targetServer.fqn}", 
+    "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
     "enabled": true, 
     "externalUuid4": "70dcae17-ba02-449b-801e-a0a9987bd831", 
     "key": "deployrhel8bootiso", 

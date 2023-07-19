@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel87kickstartconfig", 
-    "deployPath": "{ksVmwareAttuneBaseDir}/build-{targetServer.fqn}", 
+    "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
     "enabled": true, 
     "externalUuid4": "61114588-bd57-4b33-bfeb-7a61eaf860c2", 
     "key": "deployrhel8kickstartconfig", 

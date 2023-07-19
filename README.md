@@ -68,7 +68,6 @@ Creates a RHEL8 kickstart ISO.
 | ---- | ---- | ---------------- | ------- |
 | Attune OS Build Server | Linux/Unix Node | `attuneosbuildserver` | This variable is used in the "Kickstart" build procedures, so the "Attune Server" can be used to build Attune servers. |
 | Linux: Attune User | Linux/Unix Credential | `linuxattuneuser` |  |
-| KS VMWare: Attune Base Dir | Text | `ksvmwareattunebasedir` |  |
 | KS Linux: Disk First Letter | Text | `kslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
 | Target Subnet | Network IPv4 Subnet | `targetsubnet` |  |
 | Target Server: Lin | Linux/Unix Node | `targetserverlin` | The target server is a generic placeholder, usually used for the server a script will run on.<br>For example, the server being built if the procedure is building a server. |
@@ -76,6 +75,7 @@ Creates a RHEL8 kickstart ISO.
 | RHEL: 8 baseos Repo URL | Text | `rhel8baseosrepourl` |  |
 | Linux: Root User | Linux/Unix Credential | `linuxrootuser` |  |
 | Target Server | Basic Node | `targetserver` |  |
+| KS: Attune Base Dir | Text | `ksattunebasedir` |  |
 
 
 
