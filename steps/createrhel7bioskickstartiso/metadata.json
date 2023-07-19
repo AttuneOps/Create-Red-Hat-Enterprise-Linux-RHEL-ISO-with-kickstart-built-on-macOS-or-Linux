@@ -1,0 +1,32 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "b4317745-d5c3-42d3-b198-8f1db58bcf53", 
+    "isBlueprint": true, 
+    "key": "createrhel7bioskickstartiso", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "cleanbuildfiles"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "deployrhel7bootiso"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "extractrheliso"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "deployrhel7kickstartconfig"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "createbiosbootiso"
+        }
+    ], 
+    "name": "Create RHEL7 BIOS Kickstart ISO", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

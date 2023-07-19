@@ -1,0 +1,6 @@
+{
+    "externalUuid4": "042151e2-5c9b-4724-ae04-164deecb31e1", 
+    "key": "rhel7kickstartconfig", 
+    "name": "RHEL7 Kickstart Config", 
+    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
+}

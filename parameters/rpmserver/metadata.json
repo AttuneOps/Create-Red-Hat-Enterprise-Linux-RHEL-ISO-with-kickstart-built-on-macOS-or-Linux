@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "5e15c53c-5e80-4d71-9bde-d9c0c696c3c9", 
+    "key": "rpmserver", 
+    "name": "RPM Server", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinuxServer"
+}

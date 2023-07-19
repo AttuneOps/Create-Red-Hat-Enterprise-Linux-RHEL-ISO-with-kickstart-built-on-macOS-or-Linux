@@ -58,6 +58,10 @@ This Project contains the following Blueprints.
 
 Creates a RHEL8 kickstart ISO.
 
+### Create RHEL7 BIOS Kickstart ISO
+
+Creates a RHEL7 kickstart ISO.
+
 
 
 
@@ -76,6 +80,10 @@ Creates a RHEL8 kickstart ISO.
 | Linux: Root User | Linux/Unix Credential | `linuxrootuser` |  |
 | Target Server | Basic Node | `targetserver` |  |
 | KS: Attune Base Dir | Text | `ksattunebasedir` |  |
+| RPM Server | Linux/Unix Node | `rpmserver` |  |
+| KS VMWare: Attune Base Dir | Text | `ksvmwareattunebasedir` |  |
+| KS Linux: Eject CDROM | Text | `kslinuxejectcdrom` |  |
+| RHEL: 7 baseos Repo URL | Text | `rhel7baseosrepourl` |  |
 
 
 
@@ -86,6 +94,8 @@ Creates a RHEL8 kickstart ISO.
 | ---- | ---- | ------- |
 | RHEL8.8 Boot ISO | Large Archives |  |
 | RHEL8.7 Kickstart Config | Version Controlled Files |  |
+| RHEL7 Kickstart Config | Version Controlled Files | https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-options |
+| RHEL7 Boot ISO v7.7 | Large Archives |  |
 
 
 
