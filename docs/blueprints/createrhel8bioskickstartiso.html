@@ -14,7 +14,7 @@
     <meta name="title"
           content="How to Create RHEL8 BIOS Kickstart ISO - Attune Automation">
     <meta name="description"
-          content="Creates a RHEL8 kickstart ISO.">
+          content="Creates a RHEL8 BIOS kickstart ISO.">
     <meta name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
 
@@ -22,13 +22,13 @@
     <meta property="og:type" content="article" />
     <meta property="og:title"
           content="HowTo Create RHEL8 BIOS Kickstart ISO - Attune Automation" />
-    <meta property="og:description" content="Creates a RHEL8 kickstart ISO." />
+    <meta property="og:description" content="Creates a RHEL8 BIOS kickstart ISO." />
     <meta property="og:site_name" content="Attune Automation" />
     <meta property="article:section" content="IT Instruction" />
 
     <meta name="twitter:title"
           content="How to Create RHEL8 BIOS Kickstart ISO - Attune Automation" />
-    <meta name="twitter:description" content="Creates a RHEL8 kickstart ISO." />
+    <meta name="twitter:description" content="Creates a RHEL8 BIOS kickstart ISO." />
 
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-32x32.png" sizes="32x32">
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-192x192.png" sizes="192x192">
@@ -95,7 +95,7 @@
     <div class="row">
         <div class="blueprint-description col px-0">
             <p class="text-left">
-                <p>Creates a RHEL8 kickstart ISO.</p>
+                <p>Creates a RHEL8 BIOS kickstart ISO.</p>
             </p>
         </div>
     </div>
@@ -190,8 +190,8 @@
         
 
                     <h6 class="text-muted pt-2">
-                        <a href="#deployrhel8kickstartconfig">
-                            <strong>Step 4 -</strong> Deploy RHEL8 Kickstart Config
+                        <a href="#deployrhel8bioskickstartconfig">
+                            <strong>Step 4 -</strong> Deploy RHEL8 BIOS Kickstart Config
                         </a>
                     </h6>
 
@@ -200,6 +200,14 @@
                     <h6 class="text-muted pt-2">
                         <a href="#createbiosbootiso">
                             <strong>Step 5 -</strong> Create BIOS Boot ISO
+                        </a>
+                    </h6>
+
+        
+
+                    <h6 class="text-muted pt-2">
+                        <a href="#cleanbuildfiles">
+                            <strong>Step 6 -</strong> Clean Build Files
                         </a>
                     </h6>
 
@@ -490,16 +498,16 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="deployrhel8kickstartconfig">
-                            <a href="#deployrhel8kickstartconfig">
-                                <strong>Step 4 -</strong> Deploy RHEL8 Kickstart Config
+                        <h4 id="deployrhel8bioskickstartconfig">
+                            <a href="#deployrhel8bioskickstartconfig">
+                                <strong>Step 4 -</strong> Deploy RHEL8 BIOS Kickstart Config
                             </a>
                         </h4>
                     </div>
 
                     <div class="blueprint-description row">
                         <p>
-                            <p>Deploys the files required for an automated kickstart.</p>
+                            <p>Deploys the files required for an automated BIOS kickstart.</p>
                         </p>
                     </div>
 
@@ -586,6 +594,72 @@ cd {ksAttuneBaseDir}/build-{targetServer.fqn}
 mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V &quot;KS_RHEL&quot; .
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="cleanbuildfiles">
+                            <a href="#cleanbuildfiles">
+                                <strong>Step 6 -</strong> Clean Build Files
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="blueprint-description row">
+                        <p>
+                            <p>Deletes the build files and kickstart ISO.</p>
+                        </p>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+DIR=&quot;{ksAttuneBaseDir}/build-{targetServer.fqn}&quot;
+if [ -d &quot;${DIR}&quot; ]
+then
+    rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
+else
+    echo &quot;No directory to remove.&quot;
+fi
+
+ISO=&quot;{ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso&quot;
+if [ -f &quot;${ISO}&quot; ]
+then
+    rm -fv &quot;${ISO}&quot;
+else
+    echo &quot;No ISO to remove.&quot;
+fi
                 </code>
             </pre>
         </div>

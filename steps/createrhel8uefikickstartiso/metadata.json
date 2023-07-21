@@ -2,35 +2,39 @@
     "actionOnStepFail": "stop", 
     "concurrency": 1, 
     "enabled": true, 
-    "externalUuid4": "42364060-92fd-434e-a244-fe0b9ad48c70", 
+    "externalUuid4": "c492717c-2d40-4621-8955-17287d59ea3e", 
     "isBlueprint": true, 
-    "key": "createrhel8bioskickstartiso", 
+    "key": "createrhel8uefikickstartiso", 
     "links": [
         {
-            "order": 50, 
+            "order": 0, 
             "stepKey": "cleanbuildfiles"
         }, 
         {
-            "order": 100, 
+            "order": 50, 
             "stepKey": "deployrhel8bootiso"
         }, 
         {
-            "order": 150, 
+            "order": 100, 
             "stepKey": "extractrheliso"
         }, 
         {
+            "order": 150, 
+            "stepKey": "deployrhel8uefikickstartconfig"
+        }, 
+        {
             "order": 200, 
-            "stepKey": "deployrhel8bioskickstartconfig"
+            "stepKey": "modifyefibootgrupcfginimagesefibootimg"
         }, 
         {
             "order": 250, 
-            "stepKey": "createbiosbootiso"
+            "stepKey": "rhel8createuefiiso"
         }, 
         {
             "order": 300, 
             "stepKey": "cleanbuildfiles"
         }
     ], 
-    "name": "Create RHEL8 BIOS Kickstart ISO", 
+    "name": "Create RHEL8 UEFI Kickstart ISO", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

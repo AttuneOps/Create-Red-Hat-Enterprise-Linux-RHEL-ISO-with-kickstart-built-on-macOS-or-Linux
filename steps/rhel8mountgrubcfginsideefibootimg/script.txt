@@ -1,0 +1,8 @@
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+
+mount --options loop,gid={linuxAttuneUser.user},uid={linuxAttuneUser.user} ./images/efiboot.img ./temporary_mount
+
+ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
+
+echo "Here are the contents of {ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount/EFI/BOOT/grub.cfg"
+cat ./temporary_mount/EFI/BOOT/grub.cfg

@@ -25,6 +25,10 @@
         {
             "order": 200, 
             "stepKey": "createbiosbootiso"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "cleanbuildfiles"
         }
     ], 
     "name": "Create RHEL7 BIOS Kickstart ISO", 

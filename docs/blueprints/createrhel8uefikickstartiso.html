@@ -6,29 +6,29 @@
 
 
 <head>
-    <title>How to Create RHEL7 BIOS Kickstart ISO - Attune Automation</title>
+    <title>How to Create RHEL8 UEFI Kickstart ISO - Attune Automation</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title"
-          content="How to Create RHEL7 BIOS Kickstart ISO - Attune Automation">
+          content="How to Create RHEL8 UEFI Kickstart ISO - Attune Automation">
     <meta name="description"
-          content="Creates a RHEL7 kickstart ISO.">
+          content="Creates a RHEL8 UEFI kickstart ISO.">
     <meta name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
 
     <meta property="og:locale" content="en_AU" />
     <meta property="og:type" content="article" />
     <meta property="og:title"
-          content="HowTo Create RHEL7 BIOS Kickstart ISO - Attune Automation" />
-    <meta property="og:description" content="Creates a RHEL7 kickstart ISO." />
+          content="HowTo Create RHEL8 UEFI Kickstart ISO - Attune Automation" />
+    <meta property="og:description" content="Creates a RHEL8 UEFI kickstart ISO." />
     <meta property="og:site_name" content="Attune Automation" />
     <meta property="article:section" content="IT Instruction" />
 
     <meta name="twitter:title"
-          content="How to Create RHEL7 BIOS Kickstart ISO - Attune Automation" />
-    <meta name="twitter:description" content="Creates a RHEL7 kickstart ISO." />
+          content="How to Create RHEL8 UEFI Kickstart ISO - Attune Automation" />
+    <meta name="twitter:description" content="Creates a RHEL8 UEFI kickstart ISO." />
 
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-32x32.png" sizes="32x32">
     <link rel="icon" href="https://www.servertribe.com/wp-content/uploads/2020/10/cropped-server_tribe_favicon-192x192.png" sizes="192x192">
@@ -74,7 +74,7 @@
             </a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">
-            <strong>Create RHEL7 BIOS Kickstart ISO</strong>
+            <strong>Create RHEL8 UEFI Kickstart ISO</strong>
         </li>
     </ol>
 </nav>
@@ -86,7 +86,7 @@
     <div class="row pt-5">
         <div class="col px-0">
             <h1 class="text-left">
-                How to Create RHEL7 BIOS Kickstart ISO
+                How to Create RHEL8 UEFI Kickstart ISO
             </h1>
         </div>
     </div>
@@ -95,7 +95,7 @@
     <div class="row">
         <div class="blueprint-description col px-0">
             <p class="text-left">
-                <p>Creates a RHEL7 kickstart ISO.</p>
+                <p>Creates a RHEL8 UEFI kickstart ISO.</p>
             </p>
         </div>
     </div>
@@ -157,7 +157,7 @@
                     </h6>
                     <h6 class="text-muted">
                         <a href="#top">
-                            <strong>Create RHEL7 BIOS Kickstart ISO</strong>
+                            <strong>Create RHEL8 UEFI Kickstart ISO</strong>
                         </a>
                     </h6>
 
@@ -174,8 +174,8 @@
         
 
                     <h6 class="text-muted pt-2">
-                        <a href="#deployrhel7bootiso">
-                            <strong>Step 2 -</strong> Deploy RHEL7 Boot ISO
+                        <a href="#deployrhel8bootiso">
+                            <strong>Step 2 -</strong> Deploy RHEL8 Boot ISO
                         </a>
                     </h6>
 
@@ -190,16 +190,65 @@
         
 
                     <h6 class="text-muted pt-2">
-                        <a href="#deployrhel7kickstartconfig">
-                            <strong>Step 4 -</strong> Deploy RHEL7 Kickstart Config
+                        <a href="#deployrhel8uefikickstartconfig">
+                            <strong>Step 4 -</strong> Deploy RHEL8 UEFI Kickstart Config
                         </a>
                     </h6>
 
         
 
                     <h6 class="text-muted pt-2">
-                        <a href="#createbiosbootiso">
-                            <strong>Step 5 -</strong> Create BIOS Boot ISO
+                        <a href="#modifyefibootgrupcfginimagesefibootimg">
+                            <strong>Step 5 -</strong> Modify EFI/BOOT/grup.cfg in images/efiboot.img
+                        </a>
+                    </h6>
+    
+        
+
+                    <h6 class="text-muted pt-2">
+                        <a href="#createtemporarydirectoryforefibootimgmount">
+                            <strong>Step 5.1 -</strong> Create Temporary Directory for efiboot.img Mount
+                        </a>
+                    </h6>
+
+        
+
+                    <h6 class="text-muted pt-2">
+                        <a href="#rhel8mountgrubcfginsideefibootimg">
+                            <strong>Step 5.2 -</strong> RHEL8 Mount grub.cfg inside efiboot.img
+                        </a>
+                    </h6>
+
+        
+
+                    <h6 class="text-muted pt-2">
+                        <a href="#rhel8deploygrubcfginsideefibootimg">
+                            <strong>Step 5.3 -</strong> RHEL8 Deploy grub.cfg inside efiboot.img
+                        </a>
+                    </h6>
+
+        
+
+                    <h6 class="text-muted pt-2">
+                        <a href="#unmounttemporarydirectoryforefibootimgmount">
+                            <strong>Step 5.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
+                        </a>
+                    </h6>
+
+        
+
+                    <h6 class="text-muted pt-2">
+                        <a href="#deletetemporarydirectoryforefibootimg">
+                            <strong>Step 5.5 -</strong> Delete Temporary Directory for efiboot.img
+                        </a>
+                    </h6>
+
+
+        
+
+                    <h6 class="text-muted pt-2">
+                        <a href="#rhel8createuefiiso">
+                            <strong>Step 6 -</strong> RHEL8 Create UEFI ISO
                         </a>
                     </h6>
 
@@ -207,7 +256,7 @@
 
                     <h6 class="text-muted pt-2">
                         <a href="#cleanbuildfiles">
-                            <strong>Step 6 -</strong> Clean Build Files
+                            <strong>Step 7 -</strong> Clean Build Files
                         </a>
                     </h6>
 
@@ -270,7 +319,7 @@
                 </ol>
             </p>
             <p class="lead text-center">
-                You've automated: <strong>Create RHEL7 BIOS Kickstart ISO</strong>
+                You've automated: <strong>Create RHEL8 UEFI Kickstart ISO</strong>
             </p>
             <hr class="my-4 text-center">
             <div class="col px-0">
@@ -378,16 +427,16 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="deployrhel7bootiso">
-                            <a href="#deployrhel7bootiso">
-                                <strong>Step 2 -</strong> Deploy RHEL7 Boot ISO
+                        <h4 id="deployrhel8bootiso">
+                            <a href="#deployrhel8bootiso">
+                                <strong>Step 2 -</strong> Deploy RHEL8 Boot ISO
                             </a>
                         </h4>
                     </div>
 
                     <div class="blueprint-description row">
                         <p>
-                            <p>Deploys a RHEL7 ISO.</p>
+                            <p>Deploys a RHEL8 ISO.</p>
                         </p>
                     </div>
 
@@ -411,11 +460,11 @@ fi
         </p>
         <p>
             Copy the File(s)
-            <strong>RHEL7_Boot_ISO_v77.tar</strong>
+            <strong>RHEL88_Boot_ISO.unknown</strong>
             to the target node.
         </p>
         <p>
-            <strong>Extract and deploy the File(s)</strong> here:
+            <strong>Deploy the File(s)</strong> here:
         </p>
     </div>
     <div class="row py-1">
@@ -498,16 +547,16 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="deployrhel7kickstartconfig">
-                            <a href="#deployrhel7kickstartconfig">
-                                <strong>Step 4 -</strong> Deploy RHEL7 Kickstart Config
+                        <h4 id="deployrhel8uefikickstartconfig">
+                            <a href="#deployrhel8uefikickstartconfig">
+                                <strong>Step 4 -</strong> Deploy RHEL8 UEFI Kickstart Config
                             </a>
                         </h4>
                     </div>
 
                     <div class="blueprint-description row">
                         <p>
-                            <p>Deploys the files required for an automated kickstart.</p>
+                            <p>Deploys the files required for an automated UEFI kickstart.</p>
                         </p>
                     </div>
 
@@ -527,11 +576,11 @@ fi
 
     <div class="row">
         <p>
-            <p>https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-options</p>
+            
         </p>
         <p>
             Copy the File(s)
-            <strong>RHEL7_Kickstart_Config.tar</strong>
+            <strong>RHEL87_Kickstart_Config_UEFI.tar</strong>
             to the target node.
         </p>
         <p>
@@ -552,16 +601,43 @@ fi
 
 
                     <div class="row pt-5">
-                        <h4 id="createbiosbootiso">
-                            <a href="#createbiosbootiso">
-                                <strong>Step 5 -</strong> Create BIOS Boot ISO
+                        <h3 id="modifyefibootgrupcfginimagesefibootimg">
+                            <a href="#modifyefibootgrupcfginimagesefibootimg">
+                                <strong>Step 5 -</strong> Modify EFI/BOOT/grup.cfg in images/efiboot.img
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="blueprint-description row">
+                        <p>
+                            
+                        </p>
+                    </div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="createtemporarydirectoryforefibootimgmount">
+                            <a href="#createtemporarydirectoryforefibootimgmount">
+                                <strong>Step 5.1 -</strong> Create Temporary Directory for efiboot.img Mount
                             </a>
                         </h4>
                     </div>
 
                     <div class="blueprint-description row">
                         <p>
-                            <p>Creates a BIOS bootable ISO containing the kickstart files.</p>
+                            <p>Creates temporary directory <code>temporary_mount</code> for mounting <code>efiboot.img</code>.</p>
                         </p>
                     </div>
 
@@ -590,10 +666,332 @@ fi
             <pre>
                 <code class="language-sql py-0">
 cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+mkdir temporary_mount
+                </code>
+            </pre>
+        </div>
+    </div>
 
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="rhel8mountgrubcfginsideefibootimg">
+                            <a href="#rhel8mountgrubcfginsideefibootimg">
+                                <strong>Step 5.2 -</strong> RHEL8 Mount grub.cfg inside efiboot.img
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="blueprint-description row">
+                        <p>
+                            <p>The unique directory <code>{ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount</code> is a temporary mount for <code>images/efiboot.img</code>.</p>
+<p>The decision to mount to a unique directory instead of <code>/mnt</code> 
+is so that multiple kickstarts can be run simultaneously.</p>
+                        </p>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {linuxrootuser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+
+mount --options loop,gid={linuxAttuneUser.user},uid={linuxAttuneUser.user} ./images/efiboot.img ./temporary_mount
+
+ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
+
+echo &quot;Here are the contents of {ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount/EFI/BOOT/grub.cfg&quot;
+cat ./temporary_mount/EFI/BOOT/grub.cfg
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="rhel8deploygrubcfginsideefibootimg">
+                            <a href="#rhel8deploygrubcfginsideefibootimg">
+                                <strong>Step 5.3 -</strong> RHEL8 Deploy grub.cfg inside efiboot.img
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="blueprint-description row">
+                        <p>
+                            <p>Deploys <code>grub.cfg</code> to the mounted <code>efiboot.img</code> in folder <code>temporary_mount</code> under <code>EFI/BOOT</code>.</p>
+                        </p>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {linuxattuneuser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            
+        </p>
+        <p>
+            Copy the File(s)
+            <strong>RHEL87_grubcfg_Inside_efibootimg.tar</strong>
+            to the target node.
+        </p>
+        <p>
+            <strong>Extract and deploy the File(s)</strong> here:
+        </p>
+    </div>
+    <div class="row py-1">
+        <code class="language-bash">
+{ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount/EFI/BOOT, relative to the home directory
+        </code>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="unmounttemporarydirectoryforefibootimgmount">
+                            <a href="#unmounttemporarydirectoryforefibootimgmount">
+                                <strong>Step 5.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="blueprint-description row">
+                        <p>
+                            <p>Unmounts <code>temporary_mount</code>. This writes back the files into <code>images/efiboot.img</code>.</p>
+                        </p>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {linuxrootuser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+umount ./temporary_mount
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="deletetemporarydirectoryforefibootimg">
+                            <a href="#deletetemporarydirectoryforefibootimg">
+                                <strong>Step 5.5 -</strong> Delete Temporary Directory for efiboot.img
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="blueprint-description row">
+                        <p>
+                            
+                        </p>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {linuxattuneuser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+rm -rvf temporary_mount
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="rhel8createuefiiso">
+                            <a href="#rhel8createuefiiso">
+                                <strong>Step 6 -</strong> RHEL8 Create UEFI ISO
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="blueprint-description row">
+                        <p>
+                            <p>Creates a UEFI bootable ISO containing the kickstart files.</p>
+                        </p>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+  
 mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
-  -b isolinux/isolinux.bin -c isolinux/boot.cat \
-  -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V &quot;KS_RHEL&quot; .
+  -joliet-long -b isolinux/isolinux.bin -c isolinux/boot.cat \
+  -no-emul-boot -boot-load-size 4 -boot-info-table  \
+  -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points \
+  -R -J -v -T -V &quot;KS_RHEL&quot; .
                 </code>
             </pre>
         </div>
@@ -610,7 +1008,7 @@ mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
                     <div class="row pt-5">
                         <h4 id="cleanbuildfiles">
                             <a href="#cleanbuildfiles">
-                                <strong>Step 6 -</strong> Clean Build Files
+                                <strong>Step 7 -</strong> Clean Build Files
                             </a>
                         </h4>
                     </div>

@@ -1,0 +1,1 @@
+Unmounts `temporary_mount`. This writes back the files into `images/efiboot.img`.

@@ -1,0 +1,1 @@
+Creates temporary directory `temporary_mount` for mounting `efiboot.img`.

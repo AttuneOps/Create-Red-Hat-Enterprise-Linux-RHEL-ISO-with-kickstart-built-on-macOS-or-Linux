@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "e9d9691f-2814-4fad-af4e-36a413575b88", 
+    "interpreter": 1, 
+    "key": "createtemporarydirectoryforefibootimgmount", 
+    "name": "Create Temporary Directory for efiboot.img Mount", 
+    "osCredKey": "linuxattuneuser", 
+    "serverKey": "attuneosbuildserver", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

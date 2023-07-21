@@ -54,13 +54,17 @@ This Project contains the following Blueprints.
 
 
 
-### Create RHEL8 BIOS Kickstart ISO
-
-Creates a RHEL8 kickstart ISO.
-
 ### Create RHEL7 BIOS Kickstart ISO
 
 Creates a RHEL7 kickstart ISO.
+
+### Create RHEL8 BIOS Kickstart ISO
+
+Creates a RHEL8 BIOS kickstart ISO.
+
+### Create RHEL8 UEFI Kickstart ISO
+
+Creates a RHEL8 UEFI kickstart ISO.
 
 
 
@@ -71,19 +75,19 @@ Creates a RHEL7 kickstart ISO.
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
 | Attune OS Build Server | Linux/Unix Node | `attuneosbuildserver` | This variable is used in the "Kickstart" build procedures, so the "Attune Server" can be used to build Attune servers. |
-| Linux: Attune User | Linux/Unix Credential | `linuxattuneuser` |  |
+| KS: Attune Base Dir | Text | `ksattunebasedir` |  |
 | KS Linux: Disk First Letter | Text | `kslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
-| Target Subnet | Network IPv4 Subnet | `targetsubnet` |  |
+| KS Linux: Eject CDROM | Text | `kslinuxejectcdrom` |  |
+| KS VMWare: Attune Base Dir | Text | `ksvmwareattunebasedir` |  |
+| Linux: Attune User | Linux/Unix Credential | `linuxattuneuser` |  |
+| Linux: Root User | Linux/Unix Credential | `linuxrootuser` |  |
+| RHEL: 7 baseos Repo URL | Text | `rhel7baseosrepourl` |  |
+| RHEL: 8 baseos Repo URL | Text | `rhel8baseosrepourl` |  |
+| RPM Server | Linux/Unix Node | `rpmserver` |  |
+| Target Server | Basic Node | `targetserver` |  |
 | Target Server: Lin | Linux/Unix Node | `targetserverlin` | The target server is a generic placeholder, usually used for the server a script will run on.<br>For example, the server being built if the procedure is building a server. |
 | Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` |  |
-| RHEL: 8 baseos Repo URL | Text | `rhel8baseosrepourl` |  |
-| Linux: Root User | Linux/Unix Credential | `linuxrootuser` |  |
-| Target Server | Basic Node | `targetserver` |  |
-| KS: Attune Base Dir | Text | `ksattunebasedir` |  |
-| RPM Server | Linux/Unix Node | `rpmserver` |  |
-| KS VMWare: Attune Base Dir | Text | `ksvmwareattunebasedir` |  |
-| KS Linux: Eject CDROM | Text | `kslinuxejectcdrom` |  |
-| RHEL: 7 baseos Repo URL | Text | `rhel7baseosrepourl` |  |
+| Target Subnet | Network IPv4 Subnet | `targetsubnet` |  |
 
 
 
@@ -92,10 +96,12 @@ Creates a RHEL7 kickstart ISO.
 
 | Name | Type | Comment |
 | ---- | ---- | ------- |
-| RHEL8.8 Boot ISO | Large Archives |  |
-| RHEL8.7 Kickstart Config | Version Controlled Files |  |
-| RHEL7 Kickstart Config | Version Controlled Files | https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-options |
 | RHEL7 Boot ISO v7.7 | Large Archives |  |
+| RHEL7 Kickstart Config | Version Controlled Files | https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-options |
+| RHEL8.7 Kickstart Config | Version Controlled Files |  |
+| RHEL8.8 Boot ISO | Large Archives |  |
+| RHEL8.7 Kickstart Config UEFI | Version Controlled Files |  |
+| RHEL8.7 grub.cfg Inside efiboot.img | Version Controlled Files |  |
 
 
 

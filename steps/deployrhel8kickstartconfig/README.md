@@ -1,1 +1,0 @@
-Deploys the files required for an automated kickstart.

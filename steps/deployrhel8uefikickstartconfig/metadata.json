@@ -1,10 +1,10 @@
 {
     "actionOnStepFail": null, 
-    "archiveKey": "rhel87kickstartconfig", 
+    "archiveKey": "rhel87kickstartconfiguefi", 
     "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
     "enabled": true, 
-    "externalUuid4": "61114588-bd57-4b33-bfeb-7a61eaf860c2", 
-    "key": "deployrhel8kickstartconfig", 
+    "externalUuid4": "544bd283-7dec-4acf-b86a-913b85acc4c1", 
+    "key": "deployrhel8uefikickstartconfig", 
     "makoFileNames": [
         "ks.cfg"
     ], 
@@ -40,7 +40,7 @@
             "parameterType": "c.s.s.b.phv.Text"
         }
     ], 
-    "name": "Deploy RHEL8 Kickstart Config", 
+    "name": "Deploy RHEL8 UEFI Kickstart Config", 
     "osCredKey": "linuxattuneuser", 
     "serverKey": "attuneosbuildserver", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"

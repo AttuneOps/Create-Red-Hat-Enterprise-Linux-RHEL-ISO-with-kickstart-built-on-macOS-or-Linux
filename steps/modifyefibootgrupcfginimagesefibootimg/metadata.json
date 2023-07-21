@@ -1,0 +1,32 @@
+{
+    "actionOnStepFail": null, 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "5c24567b-e321-4dd0-b296-e3510507d663", 
+    "isBlueprint": false, 
+    "key": "modifyefibootgrupcfginimagesefibootimg", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "createtemporarydirectoryforefibootimgmount"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "rhel8mountgrubcfginsideefibootimg"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "rhel8deploygrubcfginsideefibootimg"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "unmounttemporarydirectoryforefibootimgmount"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "deletetemporarydirectoryforefibootimg"
+        }
+    ], 
+    "name": "Modify EFI/BOOT/grup.cfg in images/efiboot.img", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

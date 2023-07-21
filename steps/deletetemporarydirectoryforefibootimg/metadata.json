@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "9748f8b1-3c00-4aff-8edc-996503d93c3f", 
+    "interpreter": 1, 
+    "key": "deletetemporarydirectoryforefibootimg", 
+    "name": "Delete Temporary Directory for efiboot.img", 
+    "osCredKey": "linuxattuneuser", 
+    "serverKey": "attuneosbuildserver", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

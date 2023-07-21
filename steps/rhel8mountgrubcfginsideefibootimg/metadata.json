@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "ea07d0c7-3801-4ba6-8e7d-3b7a57f175e2", 
+    "interpreter": 1, 
+    "key": "rhel8mountgrubcfginsideefibootimg", 
+    "name": "RHEL8 Mount grub.cfg inside efiboot.img", 
+    "osCredKey": "linuxrootuser", 
+    "serverKey": "attuneosbuildserver", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

@@ -1,0 +1,2 @@
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+mkdir temporary_mount
