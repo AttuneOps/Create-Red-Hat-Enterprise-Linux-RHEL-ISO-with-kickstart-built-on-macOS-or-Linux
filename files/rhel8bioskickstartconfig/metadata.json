@@ -1,6 +1,6 @@
 {
     "externalUuid4": "8308a48e-7c78-4a1b-afd8-5d3f4e6f5f6a", 
-    "key": "rhel87kickstartconfig", 
-    "name": "RHEL8.7 Kickstart Config", 
+    "key": "rhel8bioskickstartconfig", 
+    "name": "RHEL8 BIOS Kickstart Config", 
     "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
 }

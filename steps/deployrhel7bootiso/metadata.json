@@ -1,6 +1,6 @@
 {
     "actionOnStepFail": null, 
-    "archiveKey": "rhel7bootisov77", 
+    "archiveKey": "rhel7bootiso", 
     "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
     "enabled": true, 
     "externalUuid4": "d3597b8a-e614-4c4b-bf38-de0a5e918290", 

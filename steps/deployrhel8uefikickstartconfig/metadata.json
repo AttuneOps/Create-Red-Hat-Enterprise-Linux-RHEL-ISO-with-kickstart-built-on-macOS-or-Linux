@@ -1,6 +1,6 @@
 {
     "actionOnStepFail": null, 
-    "archiveKey": "rhel87kickstartconfiguefi", 
+    "archiveKey": "rhel8uefikickstartconfig", 
     "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
     "enabled": true, 
     "externalUuid4": "544bd283-7dec-4acf-b86a-913b85acc4c1", 

@@ -1,6 +1,6 @@
 {
     "actionOnStepFail": null, 
-    "archiveKey": "rhel88bootiso", 
+    "archiveKey": "rhel8bootiso", 
     "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
     "enabled": true, 
     "externalUuid4": "70dcae17-ba02-449b-801e-a0a9987bd831", 
