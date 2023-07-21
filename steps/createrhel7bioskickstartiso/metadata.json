@@ -20,7 +20,7 @@
         }, 
         {
             "order": 150, 
-            "stepKey": "deployrhel7kickstartconfig"
+            "stepKey": "deployrhel7bioskickstartconfig"
         }, 
         {
             "order": 200, 

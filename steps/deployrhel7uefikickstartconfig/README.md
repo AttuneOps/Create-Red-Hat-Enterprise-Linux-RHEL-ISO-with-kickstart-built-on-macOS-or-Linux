@@ -1,0 +1,1 @@
+Deploys the files required for an automated RHEL7 UEFI kickstart.

@@ -1,0 +1,6 @@
+{
+    "externalUuid4": "1cfcc9ce-b398-4451-8f4d-5c539832b225", 
+    "key": "rhel7uefikickstartconfig", 
+    "name": "RHEL7 UEFI Kickstart Config", 
+    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
+}

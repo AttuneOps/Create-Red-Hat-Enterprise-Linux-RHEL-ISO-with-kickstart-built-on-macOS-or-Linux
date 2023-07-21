@@ -1,1 +1,1 @@
-Deploys the files required for an automated UEFI kickstart.
+Deploys the files required for an automated RHEL8 UEFI kickstart.

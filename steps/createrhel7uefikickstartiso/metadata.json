@@ -2,9 +2,9 @@
     "actionOnStepFail": "stop", 
     "concurrency": 1, 
     "enabled": true, 
-    "externalUuid4": "c492717c-2d40-4621-8955-17287d59ea3e", 
+    "externalUuid4": "ed7e1771-2f1e-4b5e-99b8-60cbf27acdbe", 
     "isBlueprint": true, 
-    "key": "createrhel8uefikickstartiso", 
+    "key": "createrhel7uefikickstartiso", 
     "links": [
         {
             "order": 0, 
@@ -12,7 +12,7 @@
         }, 
         {
             "order": 50, 
-            "stepKey": "deployrhel8bootiso"
+            "stepKey": "deployrhel7bootiso"
         }, 
         {
             "order": 100, 
@@ -20,21 +20,17 @@
         }, 
         {
             "order": 150, 
-            "stepKey": "deployrhel8uefikickstartconfig"
+            "stepKey": "deployrhel7uefikickstartconfig"
         }, 
         {
             "order": 200, 
-            "stepKey": "modifyefibootgrupcfginimagesefibootimg"
-        }, 
-        {
-            "order": 250, 
             "stepKey": "createuefibootiso"
         }, 
         {
-            "order": 300, 
+            "order": 250, 
             "stepKey": "deletebuilddirectory"
         }
     ], 
-    "name": "Create RHEL8 UEFI Kickstart ISO", 
+    "name": "Create RHEL7 UEFI Kickstart ISO", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }
