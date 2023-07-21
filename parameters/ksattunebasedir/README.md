@@ -1,0 +1,1 @@
+Base directory for deploying temporary files to build the kickstart ISO.

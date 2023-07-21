@@ -1,7 +1,0 @@
-{
-    "externalUuid4": "fa394996-13a7-424d-93fd-cc91134f1a6c", 
-    "key": "ksvmwareattunebasedir", 
-    "name": "KS VMWare: Attune Base Dir", 
-    "showInPlan": false, 
-    "type": "c.s.s.b.phv.Text"
-}

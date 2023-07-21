@@ -1,0 +1,1 @@
+Blueprints for kickstarting RHEL7 and RHEL8.

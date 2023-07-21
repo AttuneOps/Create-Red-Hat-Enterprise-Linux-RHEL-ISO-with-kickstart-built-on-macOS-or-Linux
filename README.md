@@ -9,7 +9,7 @@
 
 # Kickstart Linux
 
-
+Blueprints for kickstarting RHEL7 and RHEL8.
 
 
 
@@ -75,19 +75,17 @@ Creates a RHEL8 UEFI kickstart ISO.
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
 | Attune OS Build Server | Linux/Unix Node | `attuneosbuildserver` | This variable is used in the "Kickstart" build procedures, so the "Attune Server" can be used to build Attune servers. |
-| KS: Attune Base Dir | Text | `ksattunebasedir` |  |
 | KS Linux: Disk First Letter | Text | `kslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
-| KS Linux: Eject CDROM | Text | `kslinuxejectcdrom` |  |
-| KS VMWare: Attune Base Dir | Text | `ksvmwareattunebasedir` |  |
 | Linux: Attune User | Linux/Unix Credential | `linuxattuneuser` |  |
 | Linux: Root User | Linux/Unix Credential | `linuxrootuser` |  |
-| RHEL: 7 baseos Repo URL | Text | `rhel7baseosrepourl` |  |
-| RHEL: 8 baseos Repo URL | Text | `rhel8baseosrepourl` |  |
-| RPM Server | Linux/Unix Node | `rpmserver` |  |
 | Target Server | Basic Node | `targetserver` |  |
 | Target Server: Lin | Linux/Unix Node | `targetserverlin` | The target server is a generic placeholder, usually used for the server a script will run on.<br>For example, the server being built if the procedure is building a server. |
-| Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` |  |
-| Target Subnet | Network IPv4 Subnet | `targetsubnet` |  |
+| KS: Attune Base Dir | Text | `ksattunebasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
+| KS Linux: Eject CDROM | Text | `kslinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
+| RHEL: 8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| RHEL: 7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL for RHEL7.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
+| Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
+| Target Subnet | Network IPv4 Subnet | `targetsubnet` | Subnet used by the target server. |
 
 
 
