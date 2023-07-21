@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "c029797b-a7fb-400e-84a3-b85d5c8082b2", 
+    "interpreter": 1, 
+    "key": "deletebuilddirectory", 
+    "name": "Delete Build Directory", 
+    "osCredKey": "linuxattuneuser", 
+    "serverKey": "attuneosbuildserver", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

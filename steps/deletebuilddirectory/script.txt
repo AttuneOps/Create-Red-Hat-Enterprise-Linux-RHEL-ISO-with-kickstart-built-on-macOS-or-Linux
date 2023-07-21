@@ -1,0 +1,7 @@
+DIR="{ksAttuneBaseDir}/build-{targetServer.fqn}"
+if [ -d "${DIR}" ]
+then
+    rm -rf "${DIR}" && echo "Removed ${DIR}"
+else
+    echo "No directory to remove."
+fi

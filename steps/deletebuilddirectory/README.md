@@ -1,0 +1,1 @@
+Removes the `{ksAttuneBaseDir}/build-{targetServer.fqn}` directory.

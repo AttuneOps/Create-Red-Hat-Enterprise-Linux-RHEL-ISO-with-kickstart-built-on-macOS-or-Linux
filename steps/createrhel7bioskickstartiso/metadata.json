@@ -28,7 +28,7 @@
         }, 
         {
             "order": 250, 
-            "stepKey": "cleanbuildfiles"
+            "stepKey": "deletebuilddirectory"
         }
     ], 
     "name": "Create RHEL7 BIOS Kickstart ISO", 

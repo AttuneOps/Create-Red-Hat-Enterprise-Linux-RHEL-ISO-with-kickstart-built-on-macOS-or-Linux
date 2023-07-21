@@ -255,8 +255,8 @@
         
 
                     <h6 class="text-muted pt-2">
-                        <a href="#cleanbuildfiles">
-                            <strong>Step 7 -</strong> Clean Build Files
+                        <a href="#deletebuilddirectory">
+                            <strong>Step 7 -</strong> Delete Build Directory
                         </a>
                     </h6>
 
@@ -1006,16 +1006,16 @@ mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
 
 
                     <div class="row pt-5">
-                        <h4 id="cleanbuildfiles">
-                            <a href="#cleanbuildfiles">
-                                <strong>Step 7 -</strong> Clean Build Files
+                        <h4 id="deletebuilddirectory">
+                            <a href="#deletebuilddirectory">
+                                <strong>Step 7 -</strong> Delete Build Directory
                             </a>
                         </h4>
                     </div>
 
                     <div class="blueprint-description row">
                         <p>
-                            <p>Deletes the build files and kickstart ISO.</p>
+                            <p>Removes the <code>{ksAttuneBaseDir}/build-{targetServer.fqn}</code> directory.</p>
                         </p>
                     </div>
 
@@ -1049,14 +1049,6 @@ then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
 else
     echo &quot;No directory to remove.&quot;
-fi
-
-ISO=&quot;{ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso&quot;
-if [ -f &quot;${ISO}&quot; ]
-then
-    rm -fv &quot;${ISO}&quot;
-else
-    echo &quot;No ISO to remove.&quot;
 fi
                 </code>
             </pre>

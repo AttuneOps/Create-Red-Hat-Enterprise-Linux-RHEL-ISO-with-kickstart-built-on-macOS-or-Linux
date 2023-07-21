@@ -27,8 +27,8 @@
             "stepKey": "createbiosbootiso"
         }, 
         {
-            "order": 300, 
-            "stepKey": "cleanbuildfiles"
+            "order": 350, 
+            "stepKey": "deletebuilddirectory"
         }
     ], 
     "name": "Create RHEL8 BIOS Kickstart ISO", 
