@@ -5,7 +5,11 @@ body {
     color: #4d5b7c;
 }
 
-.blueprint-description a {
+.navbar-img {
+    max-width: 300px;
+}
+
+.description a {
     color: #0062cc;
 }
 
@@ -31,6 +35,10 @@ a:hover {
 .documentation {
     width: 100%;
     background-color: white;
+}
+
+.toc {
+    z-index: 1000;
 }
 
 .tech-card {
