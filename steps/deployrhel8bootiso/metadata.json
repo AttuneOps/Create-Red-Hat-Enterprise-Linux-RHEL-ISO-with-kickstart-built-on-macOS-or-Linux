@@ -6,7 +6,7 @@
     "externalUuid4": "70dcae17-ba02-449b-801e-a0a9987bd831", 
     "key": "deployrhel8bootiso", 
     "name": "Deploy RHEL8 Boot ISO", 
-    "osCredKey": "linuxattuneuser", 
+    "osCredKey": "buildserveruser", 
     "serverKey": "attuneosbuildserver", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": false

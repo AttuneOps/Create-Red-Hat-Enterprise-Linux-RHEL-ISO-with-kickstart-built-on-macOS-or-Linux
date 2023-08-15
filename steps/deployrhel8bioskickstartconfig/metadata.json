@@ -41,7 +41,7 @@
         }
     ], 
     "name": "Deploy RHEL8 BIOS Kickstart Config", 
-    "osCredKey": "linuxattuneuser", 
+    "osCredKey": "buildserveruser", 
     "serverKey": "attuneosbuildserver", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
 }

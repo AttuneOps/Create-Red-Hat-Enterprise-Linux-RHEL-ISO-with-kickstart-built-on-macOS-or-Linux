@@ -46,7 +46,7 @@
         }
     ], 
     "name": "Deploy RHEL7 UEFI Kickstart Config", 
-    "osCredKey": "linuxattuneuser", 
+    "osCredKey": "buildserveruser", 
     "serverKey": "attuneosbuildserver", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
 }

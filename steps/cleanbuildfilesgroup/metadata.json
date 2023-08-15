@@ -1,0 +1,16 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "eb8023cf-b54e-4035-9218-30902b7b8daf", 
+    "isBlueprint": true, 
+    "key": "cleanbuildfilesgroup", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "cleanbuildfiles"
+        }
+    ], 
+    "name": "Clean Build Files - Group", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

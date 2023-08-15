@@ -6,7 +6,7 @@
     "externalUuid4": "7e7258ec-10e9-41b5-874c-d83bb7dcf5cb", 
     "key": "rhel8deploygrubcfginsideefibootimg", 
     "name": "RHEL8 Deploy grub.cfg inside efiboot.img", 
-    "osCredKey": "linuxattuneuser", 
+    "osCredKey": "buildserveruser", 
     "serverKey": "attuneosbuildserver", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": true

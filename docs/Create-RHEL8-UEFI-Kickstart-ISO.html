@@ -428,7 +428,7 @@
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {linuxattuneuser}@{attuneosbuildserver}
+ssh {buildserveruser}@{attuneosbuildserver}
                             </code>
                         </div>
 
@@ -765,18 +765,7 @@ is so that multiple kickstarts can be run simultaneously.</p>
 
 
 
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {linuxrootuser}@{attuneosbuildserver}
-                            </code>
-                        </div>
-
+    
 
 
     
@@ -794,7 +783,7 @@ ssh {linuxrootuser}@{attuneosbuildserver}
                 <code class="language-sql py-0">
 cd {ksAttuneBaseDir}/build-{targetServer.fqn}
 
-mount --options loop,gid={linuxAttuneUser.user},uid={linuxAttuneUser.user} ./images/efiboot.img ./temporary_mount
+mount --options loop,gid={buildServerUser.user},uid={buildServerUser.user} ./images/efiboot.img ./temporary_mount
 
 ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
 
@@ -837,18 +826,7 @@ cat ./temporary_mount/EFI/BOOT/grub.cfg
 
 
 
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {linuxattuneuser}@{attuneosbuildserver}
-                            </code>
-                        </div>
-
+    
 
     
 
@@ -905,18 +883,7 @@ ssh {linuxattuneuser}@{attuneosbuildserver}
 
 
 
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {linuxrootuser}@{attuneosbuildserver}
-                            </code>
-                        </div>
-
+    
 
 
     
@@ -955,13 +922,6 @@ umount ./temporary_mount
                         </h4>
                     </div>
 
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
 
 
 
@@ -971,18 +931,7 @@ umount ./temporary_mount
 
 
 
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {linuxattuneuser}@{attuneosbuildserver}
-                            </code>
-                        </div>
-
+    
 
 
     

@@ -1,7 +1,0 @@
-{
-    "externalUuid4": "7a119159-6743-400a-b0f2-658f29baa94f", 
-    "key": "linuxattuneuser", 
-    "name": "Linux: Attune User", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.LinOsCred"
-}
