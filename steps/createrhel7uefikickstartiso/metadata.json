@@ -24,11 +24,11 @@
         }, 
         {
             "order": 200, 
-            "stepKey": "createuefibootiso"
+            "stepKey": "rhel7modifyefibootgrupcfginimagesefibootimg"
         }, 
         {
-            "order": 250, 
-            "stepKey": "deletebuilddirectory"
+            "order": 300, 
+            "stepKey": "createuefibootiso"
         }
     ], 
     "name": "Create RHEL7 UEFI Kickstart ISO", 

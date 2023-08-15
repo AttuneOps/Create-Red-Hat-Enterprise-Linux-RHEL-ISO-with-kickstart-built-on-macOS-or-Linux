@@ -238,16 +238,57 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#createuefibootiso">
-                            <strong>Step 5 -</strong> Create UEFI Boot ISO
+                        <a href="#rhel7modifyefibootgrupcfginimagesefibootimg">
+                            <strong>Step 5 -</strong> RHEL7 Modify EFI/BOOT/grup.cfg in images/efiboot.img
+                        </a>
+                    </p>
+    
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#createtemporarydirectoryforefibootimgmount">
+                            <strong>Step 5.1 -</strong> Create Temporary Directory for efiboot.img Mount
                         </a>
                     </p>
 
         
 
                     <p class="text-muted pt-2">
-                        <a href="#deletebuilddirectory">
-                            <strong>Step 6 -</strong> Delete Build Directory
+                        <a href="#rhel8mountgrubcfginsideefibootimg">
+                            <strong>Step 5.2 -</strong> RHEL8 Mount grub.cfg inside efiboot.img
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#rhel7deploygrubcfginsideefibootimg">
+                            <strong>Step 5.3 -</strong> RHEL7 Deploy grub.cfg inside efiboot.img
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#unmounttemporarydirectoryforefibootimgmount">
+                            <strong>Step 5.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#deletetemporarydirectoryforefibootimg">
+                            <strong>Step 5.5 -</strong> Delete Temporary Directory for efiboot.img
+                        </a>
+                    </p>
+
+
+        
+
+                    <p class="text-muted pt-2">
+                        <a href="#createuefibootiso">
+                            <strong>Step 6 -</strong> Create UEFI Boot ISO
                         </a>
                     </p>
 
@@ -600,9 +641,347 @@ fi
 
 
                     <div class="row pt-5">
+                        <h3 id="rhel7modifyefibootgrupcfginimagesefibootimg">
+                            <a href="#rhel7modifyefibootgrupcfginimagesefibootimg">
+                                <strong>Step 5 -</strong> RHEL7 Modify EFI/BOOT/grup.cfg in images/efiboot.img
+                            </a>
+                        </h3>
+                    </div>
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="createtemporarydirectoryforefibootimgmount">
+                            <a href="#createtemporarydirectoryforefibootimgmount">
+                                <strong>Step 5.1 -</strong> Create Temporary Directory for efiboot.img Mount
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>Creates temporary directory <code>temporary_mount</code> for mounting <code>efiboot.img</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+mkdir temporary_mount
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="rhel8mountgrubcfginsideefibootimg">
+                            <a href="#rhel8mountgrubcfginsideefibootimg">
+                                <strong>Step 5.2 -</strong> RHEL8 Mount grub.cfg inside efiboot.img
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>The unique directory <code>{ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount</code> is a temporary mount for <code>images/efiboot.img</code>.</p>
+<p>The decision to mount to a unique directory instead of <code>/mnt</code> 
+is so that multiple kickstarts can be run simultaneously.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {linuxrootuser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+
+mount --options loop,gid={buildServerUser.user},uid={buildServerUser.user} ./images/efiboot.img ./temporary_mount
+
+ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
+
+echo &quot;Here are the contents of {ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount/EFI/BOOT/grub.cfg&quot;
+cat ./temporary_mount/EFI/BOOT/grub.cfg
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="rhel7deploygrubcfginsideefibootimg">
+                            <a href="#rhel7deploygrubcfginsideefibootimg">
+                                <strong>Step 5.3 -</strong> RHEL7 Deploy grub.cfg inside efiboot.img
+                            </a>
+                        </h4>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {buildserveruser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            <p>A modified "EFI/BOOT/grub.cfg" suitable for RHEL7 UEFI boot to be put in "images/efiboot.img".</p>
+        </p>
+        <p>
+            Copy the File(s)
+            <strong>RHEL7_grubcfg_Inside_efibootimg.tar</strong>
+            to the target node.
+        </p>
+        <p>
+            <strong>Extract and deploy the File(s)</strong> here:
+        </p>
+    </div>
+    <div class="row py-1">
+        <code class="language-bash">
+{ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount/EFI/BOOT, relative to the home directory
+        </code>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="unmounttemporarydirectoryforefibootimgmount">
+                            <a href="#unmounttemporarydirectoryforefibootimgmount">
+                                <strong>Step 5.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>Unmounts <code>temporary_mount</code>. This writes back the files into <code>images/efiboot.img</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {linuxrootuser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+umount ./temporary_mount
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+                    <div class="row pt-5">
+                        <h4 id="deletetemporarydirectoryforefibootimg">
+                            <a href="#deletetemporarydirectoryforefibootimg">
+                                <strong>Step 5.5 -</strong> Delete Temporary Directory for efiboot.img
+                            </a>
+                        </h4>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="row">
+                            <p>
+                                Connect via ssh:
+                            </p>
+                        </div>
+                        <div class="row py-1">
+                            <code class="language-sql">
+ssh {buildserveruser}@{attuneosbuildserver}
+                            </code>
+                        </div>
+
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+rm -rvf temporary_mount
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
                         <h3 id="createuefibootiso">
                             <a href="#createuefibootiso">
-                                <strong>Step 5 -</strong> Create UEFI Boot ISO
+                                <strong>Step 6 -</strong> Create UEFI Boot ISO
                             </a>
                         </h3>
                     </div>
@@ -646,66 +1025,6 @@ mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
   -no-emul-boot -boot-load-size 4 -boot-info-table  \
   -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points \
   -R -J -v -T -V &quot;KS_RHEL&quot; .
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-        
-
-
-
-                    <div class="row pt-5">
-                        <h3 id="deletebuilddirectory">
-                            <a href="#deletebuilddirectory">
-                                <strong>Step 6 -</strong> Delete Build Directory
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Removes the <code>{ksAttuneBaseDir}/build-{targetServer.fqn}</code> directory.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-DIR=&quot;{ksAttuneBaseDir}/build-{targetServer.fqn}&quot;
-if [ -d &quot;${DIR}&quot; ]
-then
-    rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
-else
-    echo &quot;No directory to remove.&quot;
-fi
                 </code>
             </pre>
         </div>

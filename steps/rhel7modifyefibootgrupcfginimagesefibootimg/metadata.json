@@ -1,10 +1,10 @@
 {
-    "actionOnStepFail": null, 
+    "actionOnStepFail": "stop", 
     "concurrency": 1, 
     "enabled": true, 
-    "externalUuid4": "5c24567b-e321-4dd0-b296-e3510507d663", 
+    "externalUuid4": "0c93df98-d880-49dc-9e40-9902ffddae56", 
     "isBlueprint": false, 
-    "key": "modifyefibootgrupcfginimagesefibootimg", 
+    "key": "rhel7modifyefibootgrupcfginimagesefibootimg", 
     "links": [
         {
             "order": 0, 
@@ -16,7 +16,7 @@
         }, 
         {
             "order": 100, 
-            "stepKey": "rhel8deploygrubcfginsideefibootimg"
+            "stepKey": "rhel7deploygrubcfginsideefibootimg"
         }, 
         {
             "order": 150, 
@@ -27,6 +27,6 @@
             "stepKey": "deletetemporarydirectoryforefibootimg"
         }
     ], 
-    "name": "Modify EFI/BOOT/grup.cfg in images/efiboot.img", 
+    "name": "RHEL7 Modify EFI/BOOT/grup.cfg in images/efiboot.img", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

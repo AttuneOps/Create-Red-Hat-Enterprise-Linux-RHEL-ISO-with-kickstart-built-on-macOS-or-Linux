@@ -30,11 +30,6 @@
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
-            "name": "ksLinuxEjectCdrom", 
-            "parameterKey": "kslinuxejectcdrom", 
-            "parameterType": "c.s.s.b.phv.Text"
-        }, 
-        {
             "name": "dmsSubnet", 
             "parameterKey": "targetsubnet", 
             "parameterType": "c.s.s.b.phv.Ip4Subnet"

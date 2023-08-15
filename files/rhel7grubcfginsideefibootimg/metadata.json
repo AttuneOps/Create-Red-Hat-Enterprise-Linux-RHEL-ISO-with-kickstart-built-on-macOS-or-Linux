@@ -1,0 +1,6 @@
+{
+    "externalUuid4": "925ca2c9-8f6c-41b1-af60-40847de9d1d0", 
+    "key": "rhel7grubcfginsideefibootimg", 
+    "name": "RHEL7 grub.cfg Inside efiboot.img", 
+    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
+}

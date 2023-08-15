@@ -24,7 +24,7 @@
         }, 
         {
             "order": 200, 
-            "stepKey": "modifyefibootgrupcfginimagesefibootimg"
+            "stepKey": "rhel8modifyefibootgrupcfginimagesefibootimg"
         }, 
         {
             "order": 250, 

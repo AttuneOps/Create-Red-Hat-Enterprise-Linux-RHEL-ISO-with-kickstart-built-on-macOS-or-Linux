@@ -23,11 +23,11 @@
             "stepKey": "deployrhel7bioskickstartconfig"
         }, 
         {
-            "order": 200, 
+            "order": 250, 
             "stepKey": "createbiosbootiso"
         }, 
         {
-            "order": 250, 
+            "order": 300, 
             "stepKey": "deletebuilddirectory"
         }
     ], 
