@@ -29,6 +29,10 @@
         {
             "order": 300, 
             "stepKey": "createuefibootiso"
+        }, 
+        {
+            "order": 350, 
+            "stepKey": "deletebuilddirectory"
         }
     ], 
     "name": "Create RHEL7 UEFI Kickstart ISO", 
