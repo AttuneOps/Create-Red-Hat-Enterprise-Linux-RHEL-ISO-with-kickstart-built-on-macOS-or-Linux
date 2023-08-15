@@ -7,7 +7,7 @@
 [![Docs](https://img.shields.io/badge/videos-watch-brightgreen.svg)](https://www.youtube.com/@servertribe)
 [![Generic badge](https://img.shields.io/badge/download-latest-brightgreen.svg)](https://www.servertribe.com/community-edition/)
 
-# Kickstart Linux
+# Kickstart-RHEL-Redhat-Enterprise-Linux
 
 Blueprints for kickstarting RHEL7 and RHEL8.
 

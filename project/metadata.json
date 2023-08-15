@@ -1,6 +1,6 @@
 {
     "externalUuid4": "9df72585-81b9-4e7c-bd84-8403af28cca6", 
-    "key": "kickstartlinux", 
-    "name": "Kickstart Linux", 
+    "key": "kickstartrhelredhatenterpriselinux", 
+    "name": "Kickstart-RHEL-Redhat-Enterprise-Linux", 
     "revision": "145c6dc54454"
 }
