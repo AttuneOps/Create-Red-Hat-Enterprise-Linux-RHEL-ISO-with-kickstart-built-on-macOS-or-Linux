@@ -1,0 +1,1 @@
+Creates a RHEL7 UEFI kickstart ISO.

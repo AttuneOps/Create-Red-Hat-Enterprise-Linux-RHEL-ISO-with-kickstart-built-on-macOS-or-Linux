@@ -57,15 +57,9 @@ This Project contains the following Blueprints.
 
 
 
-### Clean Build Files - Group
-
-
 ### Create RHEL7 BIOS Kickstart ISO
 
 Creates a RHEL7 kickstart ISO.
-
-### Create RHEL7 UEFI Kickstart ISO
-
 
 ### Create RHEL8 BIOS Kickstart ISO
 
@@ -74,6 +68,14 @@ Creates a RHEL8 BIOS kickstart ISO.
 ### Create RHEL8 UEFI Kickstart ISO
 
 Creates a RHEL8 UEFI kickstart ISO.
+
+### Create RHEL7 UEFI Kickstart ISO
+
+Creates a RHEL7 UEFI kickstart ISO.
+
+### Clean Build Files - Group
+
+Deletes the build files and kickstart ISO group step.
 
 
 
