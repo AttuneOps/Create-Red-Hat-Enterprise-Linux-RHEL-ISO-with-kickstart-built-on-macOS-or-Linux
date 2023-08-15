@@ -7,7 +7,7 @@
 [![Docs](https://img.shields.io/badge/videos-watch-brightgreen.svg)](https://www.youtube.com/@servertribe)
 [![Generic badge](https://img.shields.io/badge/download-latest-brightgreen.svg)](https://www.servertribe.com/community-edition/)
 
-# Kickstart RHEL Redhat Enterprise Linux B
+# Kickstart RHEL Redhat Enterprise Linux
 
 You might also like these projects, that integrated with physical and virtual host APIs for completely unattended building of virtual machines and physical servers:
 
