@@ -261,8 +261,8 @@
         
 
                     <p class="text-muted pt-2">
-                        <a href="#rhel8mountgrubcfginsideefibootimg">
-                            <strong>Step 5.2 -</strong> RHEL8 Mount grub.cfg inside efiboot.img
+                        <a href="#mountgrubcfginsideefibootimg">
+                            <strong>Step 5.2 -</strong> Mount grub.cfg inside efiboot.img
                         </a>
                     </p>
 
@@ -740,9 +740,9 @@ mkdir temporary_mount
 
 
                     <div class="row pt-5">
-                        <h4 id="rhel8mountgrubcfginsideefibootimg">
-                            <a href="#rhel8mountgrubcfginsideefibootimg">
-                                <strong>Step 5.2 -</strong> RHEL8 Mount grub.cfg inside efiboot.img
+                        <h4 id="mountgrubcfginsideefibootimg">
+                            <a href="#mountgrubcfginsideefibootimg">
+                                <strong>Step 5.2 -</strong> Mount grub.cfg inside efiboot.img
                             </a>
                         </h4>
                     </div>
@@ -824,7 +824,7 @@ cat ./temporary_mount/EFI/BOOT/grub.cfg
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                <p>Deploys <code>grub.cfg</code> to the mounted <code>efiboot.img</code> in folder <code>temporary_mount</code> under <code>EFI/BOOT</code>.</p>
+                                <p>Deploys RHEL8 <code>grub.cfg</code> to the mounted <code>efiboot.img</code> in folder <code>temporary_mount</code> under <code>EFI/BOOT</code>.</p>
                             </p>
                         </div>
                     </div>
@@ -958,7 +958,7 @@ umount ./temporary_mount
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                
+                                <p>Deletes the temporary directory temporary_mount.</p>
                             </p>
                         </div>
                     </div>

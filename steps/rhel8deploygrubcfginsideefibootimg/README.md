@@ -1,1 +1,1 @@
-Deploys `grub.cfg` to the mounted `efiboot.img` in folder `temporary_mount` under `EFI/BOOT`.
+Deploys RHEL8 `grub.cfg` to the mounted `efiboot.img` in folder `temporary_mount` under `EFI/BOOT`.

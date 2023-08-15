@@ -12,7 +12,7 @@
         }, 
         {
             "order": 50, 
-            "stepKey": "rhel8mountgrubcfginsideefibootimg"
+            "stepKey": "mountgrubcfginsideefibootimg"
         }, 
         {
             "order": 100, 
