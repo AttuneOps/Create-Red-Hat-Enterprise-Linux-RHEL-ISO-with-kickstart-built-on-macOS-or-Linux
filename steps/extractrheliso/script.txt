@@ -1,4 +1,4 @@
-cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+cd {ksAttuneBaseDir}/build-{kickstartedNode.fqn}
 
 if ls | grep -q rhel*iso
 then
