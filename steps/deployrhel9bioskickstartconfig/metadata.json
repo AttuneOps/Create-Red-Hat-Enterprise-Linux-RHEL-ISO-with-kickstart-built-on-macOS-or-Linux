@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel9bioskickstartconfig", 
-    "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
+    "deployPath": "{ksAttuneBaseDir}/build-{kickstartedNode.fqn}", 
     "enabled": true, 
     "externalUuid4": "41ccd617-2d3c-4554-9aaa-63c0d2a4f3f3", 
     "key": "deployrhel9bioskickstartconfig", 
@@ -16,7 +16,7 @@
         }, 
         {
             "name": "linuxRootUser", 
-            "parameterKey": "linuxrootuser", 
+            "parameterKey": "kickstartedlinuxrootuser", 
             "parameterType": "c.s.s.b.phv.LinOsCred"
         }, 
         {
@@ -26,7 +26,7 @@
         }, 
         {
             "name": "targetServer", 
-            "parameterKey": "targetserverlin", 
+            "parameterKey": "kickstartedlinuxnode", 
             "parameterType": "c.s.s.b.phv.LinuxServer"
         }, 
         {
@@ -41,7 +41,7 @@
         }
     ], 
     "name": "Deploy RHEL9 BIOS Kickstart Config", 
-    "osCredKey": "buildserveruser", 
-    "serverKey": "attuneosbuildserver", 
+    "osCredKey": "kickstartworkerbuildlinuxuser", 
+    "serverKey": "kickstartworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
 }

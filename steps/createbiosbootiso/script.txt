@@ -1,6 +1,6 @@
-cd {ksAttuneBaseDir}/build-{targetServer.fqn}
+cd {ksAttuneBaseDir}/build-{kickstartedNode.fqn}
 
-mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
+mkisofs -o {ksAttuneBaseDir}/kickstart_{kickstartedNode.fqn}.iso \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V "KS_RHEL" .
 

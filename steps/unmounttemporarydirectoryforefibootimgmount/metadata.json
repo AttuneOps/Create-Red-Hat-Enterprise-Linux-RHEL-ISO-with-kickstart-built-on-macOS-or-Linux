@@ -5,8 +5,8 @@
     "interpreter": 1, 
     "key": "unmounttemporarydirectoryforefibootimgmount", 
     "name": "Unmount Temporary Directory for efiboot.img Mount", 
-    "osCredKey": "linuxrootuser", 
-    "serverKey": "attuneosbuildserver", 
+    "osCredKey": "kickstartworkerrootlinuxuser", 
+    "serverKey": "kickstartworkerlinuxnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
 }

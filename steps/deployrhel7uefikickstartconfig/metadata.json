@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel7uefikickstartconfig", 
-    "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
+    "deployPath": "{ksAttuneBaseDir}/build-{kickstartedNode.fqn}", 
     "enabled": true, 
     "externalUuid4": "22237636-2231-4902-b2c0-1d0ea71cc929", 
     "key": "deployrhel7uefikickstartconfig", 
@@ -11,7 +11,7 @@
     "makoParameters": [
         {
             "name": "linuxRootUser", 
-            "parameterKey": "linuxrootuser", 
+            "parameterKey": "kickstartedlinuxrootuser", 
             "parameterType": "c.s.s.b.phv.LinOsCred"
         }, 
         {
@@ -21,7 +21,7 @@
         }, 
         {
             "name": "targetServer", 
-            "parameterKey": "targetserverlin", 
+            "parameterKey": "kickstartedlinuxnode", 
             "parameterType": "c.s.s.b.phv.LinuxServer"
         }, 
         {
@@ -41,7 +41,7 @@
         }
     ], 
     "name": "Deploy RHEL7 UEFI Kickstart Config", 
-    "osCredKey": "buildserveruser", 
-    "serverKey": "attuneosbuildserver", 
+    "osCredKey": "kickstartworkerbuildlinuxuser", 
+    "serverKey": "kickstartworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
 }

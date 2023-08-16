@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "0c6839f8-2fca-477f-b7e5-c5e7f495b1ad", 
+    "key": "kickstartedlinuxrootuser", 
+    "name": "Kickstarted Linux root User", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinOsCred"
+}

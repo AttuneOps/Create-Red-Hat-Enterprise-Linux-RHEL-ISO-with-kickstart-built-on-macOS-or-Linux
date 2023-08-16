@@ -1,2 +1,2 @@
-cd {ksAttuneBaseDir}/build-{targetServer.fqn}
-rm -rvf temporary_mount
+cd {ksAttuneBaseDir}/build-{kickstartedNode.fqn}
+rm --verbose --recursive --force temporary_mount

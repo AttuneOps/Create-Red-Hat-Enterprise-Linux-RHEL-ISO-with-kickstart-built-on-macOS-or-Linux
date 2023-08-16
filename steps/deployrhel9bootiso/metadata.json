@@ -1,13 +1,13 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel9bootiso", 
-    "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
+    "deployPath": "{ksAttuneBaseDir}/build-{kickstartedNode.fqn}", 
     "enabled": true, 
     "externalUuid4": "360a8ac9-1ecf-4ff7-b201-9deb28cd3521", 
     "key": "deployrhel9bootiso", 
     "name": "Deploy RHEL9 Boot ISO", 
-    "osCredKey": "buildserveruser", 
-    "serverKey": "attuneosbuildserver", 
+    "osCredKey": "kickstartworkerbuildlinuxuser", 
+    "serverKey": "kickstartworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": false
 }

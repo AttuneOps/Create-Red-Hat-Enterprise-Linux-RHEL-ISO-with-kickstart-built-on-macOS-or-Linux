@@ -11,7 +11,7 @@ else
     then
         echo "No files in {rpmCaCertificateDropInDirectory}, skipping."
     else
-        echo "{rpmCaCertificateDropInDirectory} exists, copying it's contents to {ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts."
-        cp --verbose --recursive ./* "{ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts"
+        echo "{rpmCaCertificateDropInDirectory} exists, copying it's contents to {ksAttuneBaseDir}/build-{kickstartedNode.fqn}/cacerts."
+        cp --verbose --recursive ./* "{ksAttuneBaseDir}/build-{kickstartedNode.fqn}/cacerts"
     fi
 fi

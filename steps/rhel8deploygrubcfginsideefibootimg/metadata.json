@@ -1,13 +1,13 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel8grubcfginsideefibootimg", 
-    "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount/EFI/BOOT", 
+    "deployPath": "{ksAttuneBaseDir}/build-{kickstartedNode.fqn}/temporary_mount/EFI/BOOT", 
     "enabled": true, 
     "externalUuid4": "7e7258ec-10e9-41b5-874c-d83bb7dcf5cb", 
     "key": "rhel8deploygrubcfginsideefibootimg", 
     "name": "RHEL8 Deploy grub.cfg inside efiboot.img", 
-    "osCredKey": "buildserveruser", 
-    "serverKey": "attuneosbuildserver", 
+    "osCredKey": "kickstartworkerbuildlinuxuser", 
+    "serverKey": "kickstartworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": true
 }

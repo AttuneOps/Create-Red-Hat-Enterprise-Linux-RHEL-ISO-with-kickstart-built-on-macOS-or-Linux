@@ -1,1 +1,0 @@
-This variable is used in the "Kickstart" build procedures, so the "Attune Server" can be used to build Attune servers.

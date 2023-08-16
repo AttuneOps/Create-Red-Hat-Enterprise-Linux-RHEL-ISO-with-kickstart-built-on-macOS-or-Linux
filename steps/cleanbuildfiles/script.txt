@@ -1,6 +1,6 @@
 
 
-DIR="{ksAttuneBaseDir}/build-{targetServer.fqn}"
+DIR="{ksAttuneBaseDir}/build-{kickstartedNode.fqn}"
 if [ -d "${DIR}" ]
 then
     rm -rf "${DIR}" && echo "Removed ${DIR}"
@@ -8,7 +8,7 @@ else
     echo "No directory to remove."
 fi
 
-ISO="{ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso"
+ISO="{ksAttuneBaseDir}/kickstart_{kickstartedNode.fqn}.iso"
 if [ -f "${ISO}" ]
 then
     rm -fv "${ISO}"
