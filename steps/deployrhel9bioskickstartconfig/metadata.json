@@ -1,0 +1,47 @@
+{
+    "actionOnStepFail": null, 
+    "archiveKey": "rhel9bioskickstartconfig", 
+    "deployPath": "{ksAttuneBaseDir}/build-{targetServer.fqn}", 
+    "enabled": true, 
+    "externalUuid4": "41ccd617-2d3c-4554-9aaa-63c0d2a4f3f3", 
+    "key": "deployrhel9bioskickstartconfig", 
+    "makoFileNames": [
+        "ks.cfg"
+    ], 
+    "makoParameters": [
+        {
+            "name": "ksLinuxDiskFirstLetter", 
+            "parameterKey": "kslinuxdiskfirstletter", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }, 
+        {
+            "name": "linuxRootUser", 
+            "parameterKey": "linuxrootuser", 
+            "parameterType": "c.s.s.b.phv.LinOsCred"
+        }, 
+        {
+            "name": "dmsSubnet", 
+            "parameterKey": "targetsubnet", 
+            "parameterType": "c.s.s.b.phv.Ip4Subnet"
+        }, 
+        {
+            "name": "targetServer", 
+            "parameterKey": "targetserverlin", 
+            "parameterType": "c.s.s.b.phv.LinuxServer"
+        }, 
+        {
+            "name": "targetTimeZone", 
+            "parameterKey": "targetserverlinuxtimezone", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }, 
+        {
+            "name": "rhelBaseosBootUrl", 
+            "parameterKey": "rhel9baseosrepourl", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }
+    ], 
+    "name": "Deploy RHEL9 BIOS Kickstart Config", 
+    "osCredKey": "buildserveruser", 
+    "serverKey": "attuneosbuildserver", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
+}

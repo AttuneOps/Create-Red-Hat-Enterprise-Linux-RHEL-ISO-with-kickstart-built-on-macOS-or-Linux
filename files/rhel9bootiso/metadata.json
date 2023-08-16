@@ -1,0 +1,11 @@
+{
+    "externalUuid4": "f86b71dc-54d9-46d1-84ba-fefb1c5cd6aa", 
+    "fileName": "rhel-9.2-x86_64-boot.iso", 
+    "formatKey": "unknown", 
+    "key": "rhel9bootiso", 
+    "md5": "7a3d443471bb07579881cff8ad396471", 
+    "name": "RHEL9 Boot ISO", 
+    "remoteUri": null, 
+    "size": 907018240, 
+    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+}

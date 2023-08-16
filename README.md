@@ -57,9 +57,17 @@ This Project contains the following Blueprints.
 
 
 
+### Clean Build Files - Group
+
+Deletes the build files and kickstart ISO group step.
+
 ### Create RHEL7 BIOS Kickstart ISO
 
 Creates a RHEL7 kickstart ISO.
+
+### Create RHEL7 UEFI Kickstart ISO
+
+Creates a RHEL7 UEFI kickstart ISO.
 
 ### Create RHEL8 BIOS Kickstart ISO
 
@@ -69,13 +77,8 @@ Creates a RHEL8 BIOS kickstart ISO.
 
 Creates a RHEL8 UEFI kickstart ISO.
 
-### Create RHEL7 UEFI Kickstart ISO
+### Create RHEL9 BIOS Kickstart ISO
 
-Creates a RHEL7 UEFI kickstart ISO.
-
-### Clean Build Files - Group
-
-Deletes the build files and kickstart ISO group step.
 
 
 
@@ -93,11 +96,12 @@ Deletes the build files and kickstart ISO group step.
 | Linux: Root User | Linux/Unix Credential | `linuxrootuser` |  |
 | RHEL: 7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL for RHEL7.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
 | RHEL: 8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
 | Target Server | Basic Node | `targetserver` |  |
 | Target Server: Lin | Linux/Unix Node | `targetserverlin` | The target server is a generic placeholder, usually used for the server a script will run on.<br>For example, the server being built if the procedure is building a server. |
 | Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
 | Target Subnet | Network IPv4 Subnet | `targetsubnet` | Subnet used by the target server. |
-| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
+| RHEL: 9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
 
 
 
@@ -114,6 +118,8 @@ Deletes the build files and kickstart ISO group step.
 | RHEL8 Boot ISO | Large Archives |  |
 | RHEL8 grub.cfg Inside efiboot.img | Version Controlled Files | A modified "EFI/BOOT/grub.cfg" suitable for RHEL8 UEFI boot to be put in "images/efiboot.img". |
 | RHEL8 UEFI Kickstart Config | Version Controlled Files | RHEL8 UEFI boot files for kickstarting RHEL7. |
+| RHEL9 Boot ISO | Large Archives | This file can be downloaded from the following link. You need a Redhat login.<br>https://developers.redhat.com/products/rhel/download#assembly-field-downloads-page-content-61451 |
+| RHEL9 BIOS Kickstart Config | Version Controlled Files | RHEL9 BIOS boot files for kickstarting RHEL8. |
 
 
 

@@ -1,0 +1,40 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "31574fc5-dd74-489d-b5e1-73c594962585", 
+    "isBlueprint": true, 
+    "key": "createrhel9bioskickstartiso", 
+    "links": [
+        {
+            "order": 50, 
+            "stepKey": "cleanbuildfiles"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "deployrhel9bootiso"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "extractrheliso"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "deployrhel9bioskickstartconfig"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "copyrpmcacertificatesfromdropindirectory"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "createbiosbootiso"
+        }, 
+        {
+            "order": 350, 
+            "stepKey": "deletebuilddirectory"
+        }
+    ], 
+    "name": "Create RHEL9 BIOS Kickstart ISO", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

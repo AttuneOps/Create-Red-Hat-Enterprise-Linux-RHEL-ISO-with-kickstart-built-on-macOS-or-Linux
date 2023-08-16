@@ -1,0 +1,6 @@
+{
+    "externalUuid4": "7a7c561b-dbeb-426a-b979-04ecba709692", 
+    "key": "rhel9bioskickstartconfig", 
+    "name": "RHEL9 BIOS Kickstart Config", 
+    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
+}
