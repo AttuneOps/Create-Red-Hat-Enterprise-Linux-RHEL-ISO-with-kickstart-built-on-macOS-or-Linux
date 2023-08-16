@@ -245,8 +245,16 @@
         
 
                     <p class="text-muted pt-2">
+                        <a href="#copyrpmcacertificatesfromdropindirectory">
+                            <strong>Step 5 -</strong> Copy RPM CA Certificates from Drop In Directory
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
                         <a href="#createbiosbootiso">
-                            <strong>Step 5 -</strong> Create BIOS Boot ISO
+                            <strong>Step 6 -</strong> Create BIOS Boot ISO
                         </a>
                     </p>
 
@@ -254,7 +262,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#deletebuilddirectory">
-                            <strong>Step 6 -</strong> Delete Build Directory
+                            <strong>Step 7 -</strong> Delete Build Directory
                         </a>
                     </p>
 
@@ -607,9 +615,79 @@ fi
 
 
                     <div class="row pt-5">
+                        <h3 id="copyrpmcacertificatesfromdropindirectory">
+                            <a href="#copyrpmcacertificatesfromdropindirectory">
+                                <strong>Step 5 -</strong> Copy RPM CA Certificates from Drop In Directory
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>Copies any RPM CA Certificates from the drop in directory <code>{rpmCaCertificateDropInDirectory</code> to <code>{ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+if [ ! -d &quot;{rpmCaCertificateDropInDirectory}&quot; ]
+then
+    echo &quot;{rpmCaCertificateDropInDirectory} does not exist, skipping.&quot;
+else
+    cd &quot;{rpmCaCertificateDropInDirectory}&quot;
+    
+    NUMBER_FILES=$(ls -1q | wc -l)
+    echo &quot;NUMBER_FILES=${NUMBER_FILES}&quot;
+    
+    if [ &quot;${NUMBER_FILES}&quot; -eq &quot;0&quot; ]
+    then
+        echo &quot;No files in {rpmCaCertificateDropInDirectory}, skipping.&quot;
+    else
+        echo &quot;{rpmCaCertificateDropInDirectory} exists, copying it&#x27;s contents to {ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts.&quot;
+        cp --verbose --recursive ./* &quot;{ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts&quot;
+    fi
+fi
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
                         <h3 id="createbiosbootiso">
                             <a href="#createbiosbootiso">
-                                <strong>Step 5 -</strong> Create BIOS Boot ISO
+                                <strong>Step 6 -</strong> Create BIOS Boot ISO
                             </a>
                         </h3>
                     </div>
@@ -667,7 +745,7 @@ mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
                     <div class="row pt-5">
                         <h3 id="deletebuilddirectory">
                             <a href="#deletebuilddirectory">
-                                <strong>Step 6 -</strong> Delete Build Directory
+                                <strong>Step 7 -</strong> Delete Build Directory
                             </a>
                         </h3>
                     </div>

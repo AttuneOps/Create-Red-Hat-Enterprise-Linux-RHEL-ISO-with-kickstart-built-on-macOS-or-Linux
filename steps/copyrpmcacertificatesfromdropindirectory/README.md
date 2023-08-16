@@ -1,0 +1,1 @@
+Copies any RPM CA Certificates from the drop in directory `{rpmCaCertificateDropInDirectory` to `{ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts`.

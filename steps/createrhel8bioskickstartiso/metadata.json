@@ -24,6 +24,10 @@
         }, 
         {
             "order": 250, 
+            "stepKey": "copyrpmcacertificatesfromdropindirectory"
+        }, 
+        {
+            "order": 300, 
             "stepKey": "createbiosbootiso"
         }, 
         {

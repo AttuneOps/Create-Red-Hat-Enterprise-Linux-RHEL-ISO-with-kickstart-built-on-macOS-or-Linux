@@ -97,6 +97,7 @@ Deletes the build files and kickstart ISO group step.
 | Target Server: Lin | Linux/Unix Node | `targetserverlin` | The target server is a generic placeholder, usually used for the server a script will run on.<br>For example, the server being built if the procedure is building a server. |
 | Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
 | Target Subnet | Network IPv4 Subnet | `targetsubnet` | Subnet used by the target server. |
+| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
 
 
 

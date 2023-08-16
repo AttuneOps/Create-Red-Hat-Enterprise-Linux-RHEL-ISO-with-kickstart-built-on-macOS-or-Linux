@@ -24,14 +24,18 @@
         }, 
         {
             "order": 200, 
-            "stepKey": "rhel8modifyefibootgrupcfginimagesefibootimg"
+            "stepKey": "copyrpmcacertificatesfromdropindirectory"
         }, 
         {
             "order": 250, 
-            "stepKey": "createuefibootiso"
+            "stepKey": "rhel8modifyefibootgrupcfginimagesefibootimg"
         }, 
         {
             "order": 300, 
+            "stepKey": "createuefibootiso"
+        }, 
+        {
+            "order": 350, 
             "stepKey": "deletebuilddirectory"
         }
     ], 

@@ -245,8 +245,16 @@
         
 
                     <p class="text-muted pt-2">
+                        <a href="#copyrpmcacertificatesfromdropindirectory">
+                            <strong>Step 5 -</strong> Copy RPM CA Certificates from Drop In Directory
+                        </a>
+                    </p>
+
+        
+
+                    <p class="text-muted pt-2">
                         <a href="#rhel8modifyefibootgrupcfginimagesefibootimg">
-                            <strong>Step 5 -</strong> RHEL8 Modify EFI/BOOT/grup.cfg in images/efiboot.img
+                            <strong>Step 6 -</strong> RHEL8 Modify EFI/BOOT/grup.cfg in images/efiboot.img
                         </a>
                     </p>
     
@@ -254,7 +262,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#createtemporarydirectoryforefibootimgmount">
-                            <strong>Step 5.1 -</strong> Create Temporary Directory for efiboot.img Mount
+                            <strong>Step 6.1 -</strong> Create Temporary Directory for efiboot.img Mount
                         </a>
                     </p>
 
@@ -262,7 +270,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#mountgrubcfginsideefibootimg">
-                            <strong>Step 5.2 -</strong> Mount grub.cfg inside efiboot.img
+                            <strong>Step 6.2 -</strong> Mount grub.cfg inside efiboot.img
                         </a>
                     </p>
 
@@ -270,7 +278,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#rhel8deploygrubcfginsideefibootimg">
-                            <strong>Step 5.3 -</strong> RHEL8 Deploy grub.cfg inside efiboot.img
+                            <strong>Step 6.3 -</strong> RHEL8 Deploy grub.cfg inside efiboot.img
                         </a>
                     </p>
 
@@ -278,7 +286,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#unmounttemporarydirectoryforefibootimgmount">
-                            <strong>Step 5.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
+                            <strong>Step 6.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
                         </a>
                     </p>
 
@@ -286,7 +294,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#deletetemporarydirectoryforefibootimg">
-                            <strong>Step 5.5 -</strong> Delete Temporary Directory for efiboot.img
+                            <strong>Step 6.5 -</strong> Delete Temporary Directory for efiboot.img
                         </a>
                     </p>
 
@@ -295,7 +303,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#createuefibootiso">
-                            <strong>Step 6 -</strong> Create UEFI Boot ISO
+                            <strong>Step 7 -</strong> Create UEFI Boot ISO
                         </a>
                     </p>
 
@@ -303,7 +311,7 @@
 
                     <p class="text-muted pt-2">
                         <a href="#deletebuilddirectory">
-                            <strong>Step 7 -</strong> Delete Build Directory
+                            <strong>Step 8 -</strong> Delete Build Directory
                         </a>
                     </p>
 
@@ -656,9 +664,79 @@ fi
 
 
                     <div class="row pt-5">
+                        <h3 id="copyrpmcacertificatesfromdropindirectory">
+                            <a href="#copyrpmcacertificatesfromdropindirectory">
+                                <strong>Step 5 -</strong> Copy RPM CA Certificates from Drop In Directory
+                            </a>
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="description col px-0">
+                            <p>
+                                <p>Copies any RPM CA Certificates from the drop in directory <code>{rpmCaCertificateDropInDirectory</code> to <code>{ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts</code>.</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    <div class="row">
+        <p>
+            Execute the following script:
+        </p>
+    </div>
+    <div class="row">
+        <div class="col px-0">
+            <pre>
+                <code class="language-sql py-0">
+if [ ! -d &quot;{rpmCaCertificateDropInDirectory}&quot; ]
+then
+    echo &quot;{rpmCaCertificateDropInDirectory} does not exist, skipping.&quot;
+else
+    cd &quot;{rpmCaCertificateDropInDirectory}&quot;
+    
+    NUMBER_FILES=$(ls -1q | wc -l)
+    echo &quot;NUMBER_FILES=${NUMBER_FILES}&quot;
+    
+    if [ &quot;${NUMBER_FILES}&quot; -eq &quot;0&quot; ]
+    then
+        echo &quot;No files in {rpmCaCertificateDropInDirectory}, skipping.&quot;
+    else
+        echo &quot;{rpmCaCertificateDropInDirectory} exists, copying it&#x27;s contents to {ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts.&quot;
+        cp --verbose --recursive ./* &quot;{ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts&quot;
+    fi
+fi
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+
+
+
+        
+
+
+
+                    <div class="row pt-5">
                         <h3 id="rhel8modifyefibootgrupcfginimagesefibootimg">
                             <a href="#rhel8modifyefibootgrupcfginimagesefibootimg">
-                                <strong>Step 5 -</strong> RHEL8 Modify EFI/BOOT/grup.cfg in images/efiboot.img
+                                <strong>Step 6 -</strong> RHEL8 Modify EFI/BOOT/grup.cfg in images/efiboot.img
                             </a>
                         </h3>
                     </div>
@@ -687,7 +765,7 @@ fi
                     <div class="row pt-5">
                         <h4 id="createtemporarydirectoryforefibootimgmount">
                             <a href="#createtemporarydirectoryforefibootimgmount">
-                                <strong>Step 5.1 -</strong> Create Temporary Directory for efiboot.img Mount
+                                <strong>Step 6.1 -</strong> Create Temporary Directory for efiboot.img Mount
                             </a>
                         </h4>
                     </div>
@@ -742,7 +820,7 @@ mkdir temporary_mount
                     <div class="row pt-5">
                         <h4 id="mountgrubcfginsideefibootimg">
                             <a href="#mountgrubcfginsideefibootimg">
-                                <strong>Step 5.2 -</strong> Mount grub.cfg inside efiboot.img
+                                <strong>Step 6.2 -</strong> Mount grub.cfg inside efiboot.img
                             </a>
                         </h4>
                     </div>
@@ -816,7 +894,7 @@ cat ./temporary_mount/EFI/BOOT/grub.cfg
                     <div class="row pt-5">
                         <h4 id="rhel8deploygrubcfginsideefibootimg">
                             <a href="#rhel8deploygrubcfginsideefibootimg">
-                                <strong>Step 5.3 -</strong> RHEL8 Deploy grub.cfg inside efiboot.img
+                                <strong>Step 6.3 -</strong> RHEL8 Deploy grub.cfg inside efiboot.img
                             </a>
                         </h4>
                     </div>
@@ -884,7 +962,7 @@ ssh {buildserveruser}@{attuneosbuildserver}
                     <div class="row pt-5">
                         <h4 id="unmounttemporarydirectoryforefibootimgmount">
                             <a href="#unmounttemporarydirectoryforefibootimgmount">
-                                <strong>Step 5.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
+                                <strong>Step 6.4 -</strong> Unmount Temporary Directory for efiboot.img Mount
                             </a>
                         </h4>
                     </div>
@@ -950,7 +1028,7 @@ umount ./temporary_mount
                     <div class="row pt-5">
                         <h4 id="deletetemporarydirectoryforefibootimg">
                             <a href="#deletetemporarydirectoryforefibootimg">
-                                <strong>Step 5.5 -</strong> Delete Temporary Directory for efiboot.img
+                                <strong>Step 6.5 -</strong> Delete Temporary Directory for efiboot.img
                             </a>
                         </h4>
                     </div>
@@ -1017,7 +1095,7 @@ rm -rvf temporary_mount
                     <div class="row pt-5">
                         <h3 id="createuefibootiso">
                             <a href="#createuefibootiso">
-                                <strong>Step 6 -</strong> Create UEFI Boot ISO
+                                <strong>Step 7 -</strong> Create UEFI Boot ISO
                             </a>
                         </h3>
                     </div>
@@ -1077,7 +1155,7 @@ mkisofs -o {ksAttuneBaseDir}/kickstart_{targetServer.fqn}.iso \
                     <div class="row pt-5">
                         <h3 id="deletebuilddirectory">
                             <a href="#deletebuilddirectory">
-                                <strong>Step 7 -</strong> Delete Build Directory
+                                <strong>Step 8 -</strong> Delete Build Directory
                             </a>
                         </h3>
                     </div>

@@ -24,6 +24,10 @@
         }, 
         {
             "order": 200, 
+            "stepKey": "copyrpmcacertificatesfromdropindirectory"
+        }, 
+        {
+            "order": 250, 
             "stepKey": "rhel7modifyefibootgrupcfginimagesefibootimg"
         }, 
         {

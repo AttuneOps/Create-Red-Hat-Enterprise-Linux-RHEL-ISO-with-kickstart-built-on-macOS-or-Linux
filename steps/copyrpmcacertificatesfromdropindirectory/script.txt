@@ -1,0 +1,17 @@
+if [ ! -d "{rpmCaCertificateDropInDirectory}" ]
+then
+    echo "{rpmCaCertificateDropInDirectory} does not exist, skipping."
+else
+    cd "{rpmCaCertificateDropInDirectory}"
+    
+    NUMBER_FILES=$(ls -1q | wc -l)
+    echo "NUMBER_FILES=${NUMBER_FILES}"
+    
+    if [ "${NUMBER_FILES}" -eq "0" ]
+    then
+        echo "No files in {rpmCaCertificateDropInDirectory}, skipping."
+    else
+        echo "{rpmCaCertificateDropInDirectory} exists, copying it's contents to {ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts."
+        cp --verbose --recursive ./* "{ksAttuneBaseDir}/build-{targetServer.fqn}/cacerts"
+    fi
+fi

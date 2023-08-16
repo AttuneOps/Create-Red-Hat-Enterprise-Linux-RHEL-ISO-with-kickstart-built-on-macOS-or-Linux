@@ -23,6 +23,10 @@
             "stepKey": "deployrhel7bioskickstartconfig"
         }, 
         {
+            "order": 200, 
+            "stepKey": "copyrpmcacertificatesfromdropindirectory"
+        }, 
+        {
             "order": 250, 
             "stepKey": "createbiosbootiso"
         }, 
