@@ -1,0 +1,32 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "13631d4b-2970-4a65-84c8-24df31fa57b3", 
+    "isBlueprint": false, 
+    "key": "rhel9modifyefibootgrupcfginimagesefibootimg", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "createtemporarydirectoryforefibootimgmount"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "mountgrubcfginsideefibootimg"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "rhel9deploygrubcfginsideefibootimg"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "unmounttemporarydirectoryforefibootimgmount"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "deletetemporarydirectoryforefibootimg"
+        }
+    ], 
+    "name": "RHEL9 Modify EFI/BOOT/grup.cfg in images/efiboot.img", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

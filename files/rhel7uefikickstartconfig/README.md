@@ -1,0 +1,1 @@
+RHEL7 UEFI boot files for kickstarting RHEL7.

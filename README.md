@@ -80,6 +80,9 @@ Creates a RHEL8 UEFI kickstart ISO.
 ### Create RHEL9 BIOS Kickstart ISO
 
 
+### Create RHEL9 UEFI Kickstart ISO
+
+
 
 
 
@@ -113,13 +116,15 @@ Creates a RHEL8 UEFI kickstart ISO.
 | RHEL7 BIOS Kickstart Config | Version Controlled Files | https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-options |
 | RHEL7 Boot ISO | Large Archives |  |
 | RHEL7 grub.cfg Inside efiboot.img | Version Controlled Files | A modified "EFI/BOOT/grub.cfg" suitable for RHEL7 UEFI boot to be put in "images/efiboot.img". |
-| RHEL7 UEFI Kickstart Config | Version Controlled Files |  |
 | RHEL8 BIOS Kickstart Config | Version Controlled Files | RHEL8 BIOS boot files for kickstarting RHEL8. |
 | RHEL8 Boot ISO | Large Archives |  |
 | RHEL8 grub.cfg Inside efiboot.img | Version Controlled Files | A modified "EFI/BOOT/grub.cfg" suitable for RHEL8 UEFI boot to be put in "images/efiboot.img". |
-| RHEL8 UEFI Kickstart Config | Version Controlled Files | RHEL8 UEFI boot files for kickstarting RHEL7. |
 | RHEL9 Boot ISO | Large Archives | This file can be downloaded from the following link. You need a Redhat login.<br>https://developers.redhat.com/products/rhel/download#assembly-field-downloads-page-content-61451 |
 | RHEL9 BIOS Kickstart Config | Version Controlled Files | RHEL9 BIOS boot files for kickstarting RHEL8. |
+| RHEL8 UEFI Kickstart Config | Version Controlled Files | RHEL8 UEFI boot files for kickstarting RHEL8. |
+| RHEL7 UEFI Kickstart Config | Version Controlled Files | RHEL7 UEFI boot files for kickstarting RHEL7. |
+| RHEL9 UEFI Kickstart Config | Version Controlled Files | RHEL9 UEFI boot files for kickstarting RHEL9. |
+| RHEL9 grub.cfg Inside efiboot.img | Version Controlled Files | A modified "EFI/BOOT/grub.cfg" suitable for RHEL9 UEFI boot to be put in "images/efiboot.img". |
 
 
 

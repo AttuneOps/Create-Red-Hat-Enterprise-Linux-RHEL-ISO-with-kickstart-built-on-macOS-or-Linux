@@ -1,1 +1,1 @@
-RHEL8 UEFI boot files for kickstarting RHEL7.
+RHEL8 UEFI boot files for kickstarting RHEL8.

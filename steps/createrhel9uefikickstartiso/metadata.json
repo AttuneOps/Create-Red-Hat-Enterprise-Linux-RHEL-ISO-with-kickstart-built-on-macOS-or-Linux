@@ -1,0 +1,44 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "e5fbe1c7-01fe-4859-ba1a-7cfb87bf4374", 
+    "isBlueprint": true, 
+    "key": "createrhel9uefikickstartiso", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "cleanbuildfiles"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "deployrhel9bootiso"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "extractrheliso"
+        }, 
+        {
+            "order": 150, 
+            "stepKey": "deployrhel9uefikickstartconfig"
+        }, 
+        {
+            "order": 200, 
+            "stepKey": "copyrpmcacertificatesfromdropindirectory"
+        }, 
+        {
+            "order": 250, 
+            "stepKey": "rhel9modifyefibootgrupcfginimagesefibootimg"
+        }, 
+        {
+            "order": 300, 
+            "stepKey": "createuefibootiso"
+        }, 
+        {
+            "order": 350, 
+            "stepKey": "deletebuilddirectory"
+        }
+    ], 
+    "name": "Create RHEL9 UEFI Kickstart ISO", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}
