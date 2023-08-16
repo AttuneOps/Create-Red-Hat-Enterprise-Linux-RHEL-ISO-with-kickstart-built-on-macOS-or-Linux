@@ -1,0 +1,1 @@
+Creates a RHEL9 BIOS kickstart ISO.

@@ -1,1 +1,1 @@
-Deploys a RHEL7 ISO.
+Deploys a RHEL7 boot ISO.

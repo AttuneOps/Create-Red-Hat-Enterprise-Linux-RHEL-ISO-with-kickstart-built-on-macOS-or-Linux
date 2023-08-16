@@ -1,1 +1,1 @@
-Deploys a RHEL8 ISO.
+Deploys a RHEL8 boot ISO.

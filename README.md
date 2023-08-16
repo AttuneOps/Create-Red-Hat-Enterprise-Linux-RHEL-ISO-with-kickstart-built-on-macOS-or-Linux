@@ -77,11 +77,12 @@ Creates a RHEL8 BIOS kickstart ISO.
 
 Creates a RHEL8 UEFI kickstart ISO.
 
-### Create RHEL9 BIOS Kickstart ISO
-
-
 ### Create RHEL9 UEFI Kickstart ISO
 
+
+### Create RHEL9 BIOS Kickstart ISO
+
+Creates a RHEL9 BIOS kickstart ISO.
 
 
 

@@ -1,1 +1,1 @@
-Deploys the files required for an automated BIOS kickstart.
+Deploys the files required for an automated RHEL8 BIOS kickstart.
