@@ -1,1 +1,1 @@
-Creates a RHEL8 BIOS kickstart ISO.
+Creates a RHEL8 BIOS kickstart ISO. Test

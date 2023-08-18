@@ -69,10 +69,6 @@ Creates a RHEL7 kickstart ISO.
 
 Creates a RHEL7 UEFI kickstart ISO.
 
-### Create RHEL8 BIOS Kickstart ISO
-
-Creates a RHEL8 BIOS kickstart ISO.
-
 ### Create RHEL8 UEFI Kickstart ISO
 
 Creates a RHEL8 UEFI kickstart ISO.
@@ -84,6 +80,10 @@ Creates a RHEL9 BIOS kickstart ISO.
 ### Create RHEL9 UEFI Kickstart ISO
 
 
+### Create RHEL8 BIOS Kickstart ISO
+
+Creates a RHEL8 BIOS kickstart ISO. Test
+
 
 
 
@@ -92,6 +92,12 @@ Creates a RHEL9 BIOS kickstart ISO.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
+| Kickstarted Linux Node | Linux/Unix Node | `kickstartedlinuxnode` | Refers to the node being built. |
+| Kickstarted Linux root User | Linux/Unix Credential | `kickstartedlinuxrootuser` | root user for "Kickstarted Linux Node". |
+| Kickstarted Node | Basic Node | `kickstartednode` |  |
+| Kickstart Worker build Linux User | Linux/Unix Credential | `kickstartworkerbuildlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
+| Kickstart Worker Linux Node | Linux/Unix Node | `kickstartworkerlinuxnode` | Linux refers to both Linux and MacOS. |
+| Kickstart Worker root Linux User | Linux/Unix Credential | `kickstartworkerrootlinuxuser` | Only for Kickstart Worker Linux Node. |
 | KS: Attune Base Dir | Text | `ksattunebasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
 | KS Linux: Disk First Letter | Text | `kslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
 | KS Linux: Eject CDROM | Text | `kslinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
@@ -101,12 +107,6 @@ Creates a RHEL9 BIOS kickstart ISO.
 | RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
 | Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
 | Target Subnet | Network IPv4 Subnet | `targetsubnet` | Subnet used by the target server. |
-| Kickstart Worker Linux Node | Linux/Unix Node | `kickstartworkerlinuxnode` | Linux refers to both Linux and MacOS. |
-| Kickstart Worker build Linux User | Linux/Unix Credential | `kickstartworkerbuildlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
-| Kickstart Worker root Linux User | Linux/Unix Credential | `kickstartworkerrootlinuxuser` | Only for Kickstart Worker Linux Node. |
-| Kickstarted Linux Node | Linux/Unix Node | `kickstartedlinuxnode` | Refers to the node being built. |
-| Kickstarted Node | Basic Node | `kickstartednode` |  |
-| Kickstarted Linux root User | Linux/Unix Credential | `kickstartedlinuxrootuser` | root user for "Kickstarted Linux Node". |
 
 
 
