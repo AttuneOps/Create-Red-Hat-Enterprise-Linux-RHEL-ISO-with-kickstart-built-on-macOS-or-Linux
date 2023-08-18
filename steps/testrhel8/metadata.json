@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "38518b3c-718b-464b-a424-ce4820cc723f", 
+    "interpreter": 1, 
+    "key": "testrhel8", 
+    "name": "Test RHEL8", 
+    "osCredKey": "kickstartedlinuxrootuser", 
+    "serverKey": "kickstartedlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

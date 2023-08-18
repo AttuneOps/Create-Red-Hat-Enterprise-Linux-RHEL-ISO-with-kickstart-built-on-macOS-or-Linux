@@ -1,0 +1,9 @@
+cd /sys/firmware
+
+if ls | grep --quiet "efi"
+then
+    echo "This looks like UEFI boot."
+    exit 1
+else
+    echo "This looks like BIOS boot."
+fi

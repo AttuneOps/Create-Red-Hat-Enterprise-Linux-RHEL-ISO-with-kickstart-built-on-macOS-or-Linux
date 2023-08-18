@@ -1,0 +1,9 @@
+if ! hostnamectl | \
+    grep "Operating System" | \
+    grep --quiet "Red Hat Enterprise Linux 8"
+then
+    echo "This is not RHEL8."
+    exit 1
+else
+    echo "This is RHEL8."
+fi

@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "b01463f1-31f4-4189-b8ff-5ed57fd49ded", 
+    "interpreter": 1, 
+    "key": "checknetworkaccess", 
+    "name": "Check Network Access", 
+    "osCredKey": "kickstartedlinuxrootuser", 
+    "serverKey": "kickstartedlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

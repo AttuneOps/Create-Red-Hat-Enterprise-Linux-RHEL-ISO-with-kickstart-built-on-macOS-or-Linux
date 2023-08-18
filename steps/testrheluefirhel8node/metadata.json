@@ -1,0 +1,20 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "25eae3a5-a7a0-40b5-a0ea-86a8fea720ab", 
+    "isBlueprint": true, 
+    "key": "testrheluefirhel8node", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "testrheluefinode"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "testrhel8"
+        }
+    ], 
+    "name": "Test RHEL UEFI RHEL8 Node", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

@@ -69,6 +69,10 @@ Creates a RHEL7 kickstart ISO.
 
 Creates a RHEL7 UEFI kickstart ISO.
 
+### Create RHEL8 BIOS Kickstart ISO
+
+Creates a RHEL8 BIOS kickstart ISO. Test
+
 ### Create RHEL8 UEFI Kickstart ISO
 
 Creates a RHEL8 UEFI kickstart ISO.
@@ -80,9 +84,32 @@ Creates a RHEL9 BIOS kickstart ISO.
 ### Create RHEL9 UEFI Kickstart ISO
 
 
-### Create RHEL8 BIOS Kickstart ISO
+### Test RHEL UEFI RHEL8 Node
 
-Creates a RHEL8 BIOS kickstart ISO. Test
+
+### Test RHEL BIOS RHEL8 Node
+
+
+### Test RHEL BIOS RHEL7 Node
+
+
+### Test RHEL UEFI RHEL9 Node
+
+
+### Test Group
+
+
+### Test RHEL UEFI Node
+
+
+### Test RHEL BIOS Node
+
+
+### Test RHEL BIOS RHEL9 Node
+
+
+### Test RHEL UEFI RHEL7 Node
+
 
 
 
@@ -107,6 +134,7 @@ Creates a RHEL8 BIOS kickstart ISO. Test
 | RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
 | Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
 | Target Subnet | Network IPv4 Subnet | `targetsubnet` | Subnet used by the target server. |
+| IP Address for Ping Test | Text | `ipaddressforpingtest` |  |
 
 
 
@@ -127,6 +155,7 @@ Creates a RHEL8 BIOS kickstart ISO. Test
 | RHEL9 Boot ISO | Large Archives | This file can be downloaded from the following link. You need a Redhat login.<br>https://developers.redhat.com/products/rhel/download#assembly-field-downloads-page-content-61451 |
 | RHEL9 grub.cfg Inside efiboot.img | Version Controlled Files | A modified "EFI/BOOT/grub.cfg" suitable for RHEL9 UEFI boot to be put in "images/efiboot.img". |
 | RHEL9 UEFI Kickstart Config | Version Controlled Files | RHEL9 UEFI boot files for kickstarting RHEL9. |
+| Test File | Large Archives |  |
 
 
 

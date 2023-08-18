@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "1f4f30ab-8ed0-4a9c-9ff8-e4795aef00ae", 
+    "interpreter": 1, 
+    "key": "testecho", 
+    "name": "Test Echo", 
+    "osCredKey": "kickstartedlinuxrootuser", 
+    "serverKey": "kickstartedlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

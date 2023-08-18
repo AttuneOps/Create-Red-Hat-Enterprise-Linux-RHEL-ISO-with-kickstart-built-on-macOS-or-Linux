@@ -1,0 +1,12 @@
+FOLDER="/tmp"
+cd "${FOLDER}"
+
+FILE="test.txt"
+
+if [ ! -f "${FILE}" ]
+then
+    echo "${FOLDER}/${FILE} does not exist"
+    exit 1
+else
+    rm --force --verbose "${FILE}"
+fi

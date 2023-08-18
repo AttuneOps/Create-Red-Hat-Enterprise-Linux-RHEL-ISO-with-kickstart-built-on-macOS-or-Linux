@@ -1,0 +1,7 @@
+ping -c 1 "{ipAddressForPingTest}"
+
+if [ ! $? -eq "0" ]
+then
+    echo "No network"
+    exit 1
+fi

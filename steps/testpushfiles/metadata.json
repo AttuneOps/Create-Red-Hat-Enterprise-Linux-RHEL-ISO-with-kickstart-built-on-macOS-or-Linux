@@ -1,0 +1,13 @@
+{
+    "actionOnStepFail": null, 
+    "archiveKey": "testfile", 
+    "deployPath": "/tmp", 
+    "enabled": true, 
+    "externalUuid4": "c8ad27c2-27d0-47db-84c2-58655a473c1c", 
+    "key": "testpushfiles", 
+    "name": "Test Push Files", 
+    "osCredKey": "kickstartedlinuxrootuser", 
+    "serverKey": "kickstartednode", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": false
+}

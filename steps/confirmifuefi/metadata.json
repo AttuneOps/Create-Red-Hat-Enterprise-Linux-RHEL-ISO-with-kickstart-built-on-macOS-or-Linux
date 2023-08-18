@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "18d86721-47cf-45d1-b871-9f0b34cba242", 
+    "interpreter": 1, 
+    "key": "confirmifuefi", 
+    "name": "Confirm if UEFI", 
+    "osCredKey": "kickstartedlinuxrootuser", 
+    "serverKey": "kickstartedlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}

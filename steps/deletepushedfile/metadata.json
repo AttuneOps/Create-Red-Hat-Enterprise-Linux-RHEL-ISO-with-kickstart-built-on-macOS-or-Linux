@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "8042f84d-39d7-46ff-a534-256dd9d4b01b", 
+    "interpreter": 1, 
+    "key": "deletepushedfile", 
+    "name": "Delete Pushed File", 
+    "osCredKey": "kickstartedlinuxrootuser", 
+    "serverKey": "kickstartedlinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}
