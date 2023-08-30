@@ -84,31 +84,31 @@ Creates a RHEL9 BIOS kickstart ISO.
 ### Create RHEL9 UEFI Kickstart ISO
 
 
-### Test RHEL UEFI RHEL8 Node
-
-
-### Test RHEL BIOS RHEL8 Node
-
-
-### Test RHEL BIOS RHEL7 Node
-
-
-### Test RHEL UEFI RHEL9 Node
-
-
 ### Test Group
-
-
-### Test RHEL UEFI Node
 
 
 ### Test RHEL BIOS Node
 
 
+### Test RHEL BIOS RHEL7 Node
+
+
+### Test RHEL BIOS RHEL8 Node
+
+
 ### Test RHEL BIOS RHEL9 Node
 
 
+### Test RHEL UEFI Node
+
+
 ### Test RHEL UEFI RHEL7 Node
+
+
+### Test RHEL UEFI RHEL8 Node
+
+
+### Test RHEL UEFI RHEL9 Node
 
 
 
@@ -119,22 +119,22 @@ Creates a RHEL9 BIOS kickstart ISO.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
-| Kickstarted Linux Node | Linux/Unix Node | `kickstartedlinuxnode` | Refers to the node being built. |
-| Kickstarted Linux root User | Linux/Unix Credential | `kickstartedlinuxrootuser` | root user for "Kickstarted Linux Node". |
-| Kickstarted Node | Basic Node | `kickstartednode` |  |
-| Kickstart Worker build Linux User | Linux/Unix Credential | `kickstartworkerbuildlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
-| Kickstart Worker Linux Node | Linux/Unix Node | `kickstartworkerlinuxnode` | Linux refers to both Linux and MacOS. |
-| Kickstart Worker root Linux User | Linux/Unix Credential | `kickstartworkerrootlinuxuser` | Only for Kickstart Worker Linux Node. |
-| KS: Attune Base Dir | Text | `ksattunebasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
-| KS Linux: Disk First Letter | Text | `kslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
-| KS Linux: Eject CDROM | Text | `kslinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
-| RHEL: 7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL for RHEL7.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
-| RHEL: 8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
-| RHEL: 9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
-| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
-| Target Server: Linux TimeZone | Text | `targetserverlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
-| Target Subnet | Network IPv4 Subnet | `targetsubnet` | Subnet used by the target server. |
 | IP Address for Ping Test | Text | `ipaddressforpingtest` |  |
+| Kickstarted Linux Node | Linux/Unix Node | `kickstartedlinuxnode` | Refers to the node being built. |
+| Kickstarted Node | Basic Node | `kickstartednode` |  |
+| Kickstart Worker Linux Node | Linux/Unix Node | `kickstartworkerlinuxnode` | Linux refers to both Linux and MacOS. |
+| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
+| Kickstarted Node Subnet | Network IPv4 Subnet | `kickstartednodesubnet` | Subnet used by the target server. |
+| Kickstart Worker Linux User | Linux/Unix Credential | `kickstartworkerlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
+| Kickstart Worker Linux User: root | Linux/Unix Credential | `kickstartworkerlinuxuserroot` | Only for Kickstart Worker Linux Node. |
+| Kickstarted Linux User: root | Linux/Unix Credential | `kickstartedlinuxuserroot` | root user for "Kickstarted Linux Node". |
+| Kickstarted Linux: Disk First Letter | Text | `kickstartedlinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
+| Kickstarted Linux: Eject CDROM | Text | `kickstartedlinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
+| Kickstarted Linux TimeZone | Text | `kickstartedlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
+| Kickstart Worker Base Dir | Text | `kickstartworkerbasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
+| RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
+| RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
 
 
 

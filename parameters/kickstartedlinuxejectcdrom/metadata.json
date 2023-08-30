@@ -1,7 +1,7 @@
 {
     "externalUuid4": "08617628-d7ae-4d1e-be36-f97c20724c49", 
-    "key": "kslinuxejectcdrom", 
-    "name": "KS Linux: Eject CDROM", 
+    "key": "kickstartedlinuxejectcdrom", 
+    "name": "Kickstarted Linux: Eject CDROM", 
     "showInPlan": true, 
     "type": "c.s.s.b.phv.Text"
 }

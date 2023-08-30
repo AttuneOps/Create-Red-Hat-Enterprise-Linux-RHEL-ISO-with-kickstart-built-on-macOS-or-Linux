@@ -1,11 +1,11 @@
 {
     "externalUuid4": "c1bacf70-c178-42ec-aafd-1254645dd335", 
-    "fileName": "rhel-8.8-x86_64-boot.iso", 
+    "fileName": "rhel-8.7-x86_64-boot.iso", 
     "formatKey": "unknown", 
     "key": "rhel8bootiso", 
-    "md5": "cc6b5e8fbc6d2ce6ac0c9ebf455c193a", 
+    "md5": "16fca9dedfb1e82312ebce0619c766c8", 
     "name": "RHEL8 Boot ISO", 
     "remoteUri": null, 
-    "size": 948961280, 
+    "size": 902823936, 
     "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
 }

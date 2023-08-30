@@ -1,8 +1,8 @@
-cd {ksAttuneBaseDir}/build-{kickstartedNode.fqn}
+cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
 
 mount --options loop,gid={kickstartWorkerBuildLinuxUser.user},uid={kickstartWorkerBuildLinuxUser.user} ./images/efiboot.img ./temporary_mount
 
 ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
 
-echo "Here are the contents of {ksAttuneBaseDir}/build-{kickstartedNode.fqn}/temporary_mount/EFI/BOOT/grub.cfg"
+echo "Here are the contents of {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/temporary_mount/EFI/BOOT/grub.cfg"
 cat ./temporary_mount/EFI/BOOT/grub.cfg

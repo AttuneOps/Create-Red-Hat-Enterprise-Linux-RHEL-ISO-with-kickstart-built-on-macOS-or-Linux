@@ -1,7 +1,7 @@
 {
     "externalUuid4": "83b2d367-279b-4127-9cd2-635a6a32c32a", 
-    "key": "ksattunebasedir", 
-    "name": "KS: Attune Base Dir", 
+    "key": "kickstartworkerbasedir", 
+    "name": "Kickstart Worker Base Dir", 
     "showInPlan": false, 
     "type": "c.s.s.b.phv.Text"
 }

@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel9uefikickstartconfig", 
-    "deployPath": "{ksAttuneBaseDir}/build-{kickstartedNode.fqn}", 
+    "deployPath": "{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}", 
     "enabled": true, 
     "externalUuid4": "6cb8a544-7f98-4f7a-a88c-d592e76f0255", 
     "key": "deployrhel9uefikickstartconfig", 
@@ -11,17 +11,17 @@
     "makoParameters": [
         {
             "name": "ksLinuxDiskFirstLetter", 
-            "parameterKey": "kslinuxdiskfirstletter", 
+            "parameterKey": "kickstartedlinuxdiskfirstletter", 
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
             "name": "linuxRootUser", 
-            "parameterKey": "kickstartedlinuxrootuser", 
+            "parameterKey": "kickstartedlinuxuserroot", 
             "parameterType": "c.s.s.b.phv.LinOsCred"
         }, 
         {
             "name": "dmsSubnet", 
-            "parameterKey": "targetsubnet", 
+            "parameterKey": "kickstartednodesubnet", 
             "parameterType": "c.s.s.b.phv.Ip4Subnet"
         }, 
         {
@@ -31,7 +31,7 @@
         }, 
         {
             "name": "targetTimeZone", 
-            "parameterKey": "targetserverlinuxtimezone", 
+            "parameterKey": "kickstartedlinuxtimezone", 
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
@@ -41,7 +41,7 @@
         }
     ], 
     "name": "Deploy RHEL9 UEFI Kickstart Config", 
-    "osCredKey": "kickstartworkerbuildlinuxuser", 
+    "osCredKey": "kickstartworkerlinuxuser", 
     "serverKey": "kickstartworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
 }

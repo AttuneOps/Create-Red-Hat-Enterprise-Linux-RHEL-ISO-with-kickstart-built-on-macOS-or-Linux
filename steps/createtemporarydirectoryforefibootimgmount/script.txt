@@ -1,2 +1,2 @@
-cd {ksAttuneBaseDir}/build-{kickstartedNode.fqn}
+cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
 mkdir temporary_mount

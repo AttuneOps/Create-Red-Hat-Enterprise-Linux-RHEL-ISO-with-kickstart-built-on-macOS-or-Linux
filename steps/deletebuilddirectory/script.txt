@@ -1,4 +1,4 @@
-DIR="{ksAttuneBaseDir}/build-{kickstartedNode.fqn}"
+DIR="{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}"
 if [ -d "${DIR}" ]
 then
     rm -rf "${DIR}" && echo "Removed ${DIR}"

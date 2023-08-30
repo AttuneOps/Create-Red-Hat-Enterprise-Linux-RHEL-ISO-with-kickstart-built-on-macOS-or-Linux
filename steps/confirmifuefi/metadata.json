@@ -5,7 +5,7 @@
     "interpreter": 1, 
     "key": "confirmifuefi", 
     "name": "Confirm if UEFI", 
-    "osCredKey": "kickstartedlinuxrootuser", 
+    "osCredKey": "kickstartedlinuxuserroot", 
     "serverKey": "kickstartedlinuxnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"

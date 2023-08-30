@@ -1,11 +1,11 @@
 {
     "externalUuid4": "ed44147a-1f15-42b1-ae99-f79e9d09f0ff", 
-    "fileName": "RHEL7_Boot_ISO_v77.tar", 
-    "formatKey": "tar", 
+    "fileName": "rhel-server-7.9-x86_64-boot.iso", 
+    "formatKey": "unknown", 
     "key": "rhel7bootiso", 
-    "md5": "100213f5f92c9c74fd8f7f2e1bf6587a", 
+    "md5": "1aef51f29436fac42d0eaeb7cbfa1aa5", 
     "name": "RHEL7 Boot ISO", 
     "remoteUri": null, 
-    "size": 748062720, 
+    "size": 637534208, 
     "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
 }

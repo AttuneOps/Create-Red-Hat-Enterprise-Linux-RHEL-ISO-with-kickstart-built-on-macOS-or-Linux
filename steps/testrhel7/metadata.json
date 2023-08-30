@@ -5,7 +5,7 @@
     "interpreter": 1, 
     "key": "testrhel7", 
     "name": "Test RHEL7", 
-    "osCredKey": "kickstartedlinuxrootuser", 
+    "osCredKey": "kickstartedlinuxuserroot", 
     "serverKey": "kickstartedlinuxnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"

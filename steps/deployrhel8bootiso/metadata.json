@@ -1,12 +1,12 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel8bootiso", 
-    "deployPath": "{ksAttuneBaseDir}/build-{kickstartedNode.fqn}", 
+    "deployPath": "{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}", 
     "enabled": true, 
     "externalUuid4": "70dcae17-ba02-449b-801e-a0a9987bd831", 
     "key": "deployrhel8bootiso", 
     "name": "Deploy RHEL8 Boot ISO", 
-    "osCredKey": "kickstartworkerbuildlinuxuser", 
+    "osCredKey": "kickstartworkerlinuxuser", 
     "serverKey": "kickstartworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": false

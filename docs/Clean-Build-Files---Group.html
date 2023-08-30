@@ -339,7 +339,7 @@
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartworkerbuildlinuxuser}@{kickstartworkerlinuxnode}
+ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
                             </code>
                         </div>
 
@@ -358,7 +358,7 @@ ssh {kickstartworkerbuildlinuxuser}@{kickstartworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{ksAttuneBaseDir}/build-{kickstartedNode.fqn}&quot;
+DIR=&quot;{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
@@ -366,7 +366,7 @@ else
     echo &quot;No directory to remove.&quot;
 fi
 
-ISO=&quot;{ksAttuneBaseDir}/kickstart_{kickstartedNode.fqn}.iso&quot;
+ISO=&quot;{kickstartWorkerBaseDir}/kickstart_{kickstartedNode.fqn}.iso&quot;
 if [ -f &quot;${ISO}&quot; ]
 then
     rm -fv &quot;${ISO}&quot;

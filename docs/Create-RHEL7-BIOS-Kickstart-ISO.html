@@ -387,7 +387,7 @@
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartworkerbuildlinuxuser}@{kickstartworkerlinuxnode}
+ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
                             </code>
                         </div>
 
@@ -406,7 +406,7 @@ ssh {kickstartworkerbuildlinuxuser}@{kickstartworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{ksAttuneBaseDir}/build-{kickstartedNode.fqn}&quot;
+DIR=&quot;{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
@@ -414,7 +414,7 @@ else
     echo &quot;No directory to remove.&quot;
 fi
 
-ISO=&quot;{ksAttuneBaseDir}/kickstart_{kickstartedNode.fqn}.iso&quot;
+ISO=&quot;{kickstartWorkerBaseDir}/kickstart_{kickstartedNode.fqn}.iso&quot;
 if [ -f &quot;${ISO}&quot; ]
 then
     rm -fv &quot;${ISO}&quot;
@@ -470,7 +470,7 @@ fi
         </p>
         <p>
             Copy the File(s)
-            <strong>RHEL7_Boot_ISO.tar</strong>
+            <strong>RHEL7_Boot_ISO.unknown</strong>
             to the target node.
         </p>
         <p>
@@ -479,7 +479,7 @@ fi
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{ksAttuneBaseDir}/build-{kickstartedNode.fqn}, relative to the home directory
+{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -531,7 +531,7 @@ fi
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {ksAttuneBaseDir}/build-{kickstartedNode.fqn}
+cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
 
 if ls | grep -q rhel*iso
 then
@@ -602,7 +602,7 @@ fi
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{ksAttuneBaseDir}/build-{kickstartedNode.fqn}, relative to the home directory
+{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -667,8 +667,8 @@ else
     then
         echo &quot;No files in {rpmCaCertificateDropInDirectory}, skipping.&quot;
     else
-        echo &quot;{rpmCaCertificateDropInDirectory} exists, copying it&#x27;s contents to {ksAttuneBaseDir}/build-{kickstartedNode.fqn}/cacerts.&quot;
-        cp --verbose --recursive ./* &quot;{ksAttuneBaseDir}/build-{kickstartedNode.fqn}/cacerts&quot;
+        echo &quot;{rpmCaCertificateDropInDirectory} exists, copying it&#x27;s contents to {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/cacerts.&quot;
+        cp --verbose --recursive ./* &quot;{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/cacerts&quot;
     fi
 fi
                 </code>
@@ -724,9 +724,9 @@ fi
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {ksAttuneBaseDir}/build-{kickstartedNode.fqn}
+cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
 
-mkisofs -o {ksAttuneBaseDir}/kickstart_{kickstartedNode.fqn}.iso \
+mkisofs -o {kickstartWorkerBaseDir}/kickstart_{kickstartedNode.fqn}.iso \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V &quot;KS_RHEL&quot; .
                 </code>
@@ -782,7 +782,7 @@ mkisofs -o {ksAttuneBaseDir}/kickstart_{kickstartedNode.fqn}.iso \
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{ksAttuneBaseDir}/build-{kickstartedNode.fqn}&quot;
+DIR=&quot;{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;

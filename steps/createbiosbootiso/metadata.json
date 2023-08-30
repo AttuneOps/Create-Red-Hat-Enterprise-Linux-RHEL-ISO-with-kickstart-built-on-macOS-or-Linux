@@ -5,7 +5,7 @@
     "interpreter": 1, 
     "key": "createbiosbootiso", 
     "name": "Create BIOS Boot ISO", 
-    "osCredKey": "kickstartworkerbuildlinuxuser", 
+    "osCredKey": "kickstartworkerlinuxuser", 
     "serverKey": "kickstartworkerlinuxnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
