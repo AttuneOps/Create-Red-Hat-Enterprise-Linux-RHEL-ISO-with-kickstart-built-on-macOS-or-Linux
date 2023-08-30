@@ -859,7 +859,7 @@ ssh {kickstartworkerlinuxuserroot}@{kickstartworkerlinuxnode}
                 <code class="language-sql py-0">
 cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
 
-mount --options loop,gid={kickstartWorkerBuildLinuxUser.user},uid={kickstartWorkerBuildLinuxUser.user} ./images/efiboot.img ./temporary_mount
+mount --options loop,gid={kickstartWorkerLinuxUser.user},uid={kickstartWorkerLinuxUser.user} ./images/efiboot.img ./temporary_mount
 
 ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
 
