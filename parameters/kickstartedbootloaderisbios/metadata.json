@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "f22e0b6d-cd6a-4fac-80de-1c1550085681", 
+    "key": "kickstartedbootloaderisbios", 
+    "name": "Kickstarted Boot Loader is BIOS", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

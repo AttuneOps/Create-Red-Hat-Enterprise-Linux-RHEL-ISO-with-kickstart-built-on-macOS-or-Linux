@@ -2,31 +2,35 @@
     "actionOnStepFail": "stop", 
     "concurrency": 1, 
     "enabled": true, 
-    "externalUuid4": "8ff8c14f-e193-4ed8-b60d-8d7e27bc76e4", 
+    "externalUuid4": "932fd214-08b7-4cce-9fd0-d12d396337f3", 
     "isBlueprint": true, 
-    "key": "testrhelbiosnode", 
+    "key": "testrhelnode", 
     "links": [
         {
             "order": 0, 
             "stepKey": "testecho"
         }, 
         {
-            "order": 50, 
+            "order": 100, 
             "stepKey": "testpushfiles"
         }, 
         {
-            "order": 100, 
+            "order": 200, 
             "stepKey": "deletepushedfile"
         }, 
         {
-            "order": 150, 
-            "stepKey": "confirmifbios"
+            "order": 350, 
+            "stepKey": "confirmbootconfiguration"
         }, 
         {
-            "order": 200, 
+            "order": 400, 
             "stepKey": "checknetworkaccess"
+        }, 
+        {
+            "order": 500, 
+            "stepKey": "checkoperatingsystem"
         }
     ], 
-    "name": "Test RHEL BIOS Node", 
+    "name": "Test RHEL Node", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

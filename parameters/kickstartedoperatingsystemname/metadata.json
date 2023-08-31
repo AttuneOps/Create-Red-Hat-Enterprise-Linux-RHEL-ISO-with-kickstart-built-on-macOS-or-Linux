@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "9395f39e-53cb-4009-86dd-5e5dd151fa9a", 
+    "key": "kickstartedoperatingsystemname", 
+    "name": "Kickstarted Operating System Name", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

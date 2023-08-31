@@ -1,9 +1,0 @@
-if ! hostnamectl | \
-    grep "Operating System" | \
-    grep --quiet "Red Hat Enterprise Linux 9"
-then
-    echo "This is not RHEL9."
-    exit 1
-else
-    echo "This is RHEL9."
-fi

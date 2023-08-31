@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "d006e603-aecb-4534-84ba-38eabce80d09", 
+    "key": "kickstartedbootloaderisuefi", 
+    "name": "Kickstarted Boot Loader is UEFI", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

@@ -1,7 +1,7 @@
 {
     "externalUuid4": "c4dac7f7-7b20-4b6f-8a9b-be9f69d301c3", 
     "key": "kickstartedlinuxdiskfirstletter", 
-    "name": "Kickstarted Linux: Disk First Letter", 
+    "name": "Kickstarted Linux Disk First Letter", 
     "showInPlan": true, 
     "type": "c.s.s.b.phv.Text"
 }

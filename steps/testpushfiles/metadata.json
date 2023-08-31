@@ -1,5 +1,5 @@
 {
-    "actionOnStepFail": null, 
+    "actionOnStepFail": "continue", 
     "archiveKey": "testfile", 
     "deployPath": "/tmp", 
     "enabled": true, 

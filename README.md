@@ -123,31 +123,7 @@ Creates a RHEL9 BIOS kickstart ISO.
 ### Create RHEL9 UEFI Kickstart ISO
 
 
-### Test Group
-
-
-### Test RHEL BIOS Node
-
-
-### Test RHEL BIOS RHEL7 Node
-
-
-### Test RHEL BIOS RHEL8 Node
-
-
-### Test RHEL BIOS RHEL9 Node
-
-
-### Test RHEL UEFI Node
-
-
-### Test RHEL UEFI RHEL7 Node
-
-
-### Test RHEL UEFI RHEL8 Node
-
-
-### Test RHEL UEFI RHEL9 Node
+### Test RHEL Node
 
 
 
@@ -167,13 +143,16 @@ Creates a RHEL9 BIOS kickstart ISO.
 | Kickstart Worker Linux User | Linux/Unix Credential | `kickstartworkerlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
 | Kickstart Worker Linux User: root | Linux/Unix Credential | `kickstartworkerlinuxuserroot` | Only for Kickstart Worker Linux Node. |
 | Kickstarted Linux User: root | Linux/Unix Credential | `kickstartedlinuxuserroot` | root user for "Kickstarted Linux Node". |
-| Kickstarted Linux: Disk First Letter | Text | `kickstartedlinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
-| Kickstarted Linux: Eject CDROM | Text | `kickstartedlinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
 | Kickstarted Linux TimeZone | Text | `kickstartedlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
 | Kickstart Worker Base Dir | Text | `kickstartworkerbasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
 | RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
 | RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
 | RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| Kickstarted Linux Disk First Letter | Text | `kickstartedlinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
+| Kickstarted Linux Eject CDROM | Text | `kickstartedlinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
+| Kickstarted Boot Loader is BIOS | Text | `kickstartedbootloaderisbios` | Set as '1' for true. |
+| Kickstarted Boot Loader is UEFI | Text | `kickstartedbootloaderisuefi` | Set as '1' for true. |
+| Kickstarted Operating System Name | Text | `kickstartedoperatingsystemname` | Set as:<br>"Red Hat Enterprise Linux 7",<br>"Red Hat Enterprise Linux 8", or<br>"Red Hat Enterprise Linux 9". |
 
 
 
