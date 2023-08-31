@@ -7,7 +7,7 @@
 [![Docs](https://img.shields.io/badge/videos-watch-brightgreen.svg)](https://www.youtube.com/@servertribe)
 [![Generic badge](https://img.shields.io/badge/download-latest-brightgreen.svg)](https://www.servertribe.com/community-edition/)
 
-# Kickstart RHEL Redhat Enterprise Linux
+# Automate Red Hat Enterprise Linux RHEL Installation with Kickstart Placeholder
 
 As the demands of modern digital infrastructure grow, the need for 
 efficient and standardised methods of operating system deployment 
@@ -304,23 +304,23 @@ overall performance and integrity of RHEL deployments.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
-| RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
-| RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
-| RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
-| New OS Node Subnet | Network IPv4 Subnet | `newosnodesubnet` | Subnet used by the new operating system to be built. |
-| Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Automation Worker node. |
-| Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` | non privilege user on the Automation Worker node. |
-| New OS Linux User: root | Linux/Unix Credential | `newoslinuxuserroot` | root user on the New OS to be built. |
+| Automation Worker Base Directory | Text | `automationworkerbasedirectory` | Base directory for deploying temporary files to build the kickstart ISO. |
 | Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The device used to perform tasks to create the ISO. |
-| New OS Linux Node | Linux/Unix Node | `newoslinuxnode` | The New OS to be built. |
+| Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` | non privilege user on the Automation Worker node. |
+| Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Automation Worker node. |
 | New OS Boot Loader is BIOS | Text | `newosbootloaderisbios` | Set as 'true' or 'false'. |
 | New OS Boot Loader is UEFI | Text | `newosbootloaderisuefi` | Set as 'true' or 'false'. |
 | New OS Linux Disk First Letter | Text | `newoslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda set as 's' or 'x'. |
 | New OS Linux Eject CDROM | Text | `newoslinuxejectcdrom` | Set 'true' to eject CDROM after the kickstart installation and 'false' to do nothing. |
+| New OS Linux Node | Linux/Unix Node | `newoslinuxnode` | The New OS to be built. |
 | New OS Linux TimeZone | Text | `newoslinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
+| New OS Linux User: root | Linux/Unix Credential | `newoslinuxuserroot` | root user on the New OS to be built. |
+| New OS Node Subnet | Network IPv4 Subnet | `newosnodesubnet` | Subnet used by the new operating system to be built. |
 | New OS RPM CA Certificate Directory | Text | `newosrpmcacertificatedirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. If it does not exist or if it is empty, then it will not be used. |
 | Operating System Name | Text | `operatingsystemname` | Set as:<br>"Red Hat Enterprise Linux 7",<br>"Red Hat Enterprise Linux 8", or<br>"Red Hat Enterprise Linux 9". |
-| Automation Worker Base Directory | Text | `automationworkerbasedirectory` | Base directory for deploying temporary files to build the kickstart ISO. |
+| RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
+| RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
 
 
 

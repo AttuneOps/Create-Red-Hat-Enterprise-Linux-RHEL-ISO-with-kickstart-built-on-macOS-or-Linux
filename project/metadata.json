@@ -1,6 +1,6 @@
 {
     "externalUuid4": "9df72585-81b9-4e7c-bd84-8403af28cca6", 
-    "key": "kickstartrhelredhatenterpriselinux", 
-    "name": "Kickstart RHEL Redhat Enterprise Linux", 
+    "key": "automateredhatenterpriselinuxrhelinstallationwithkickstartplaceholder", 
+    "name": "Automate Red Hat Enterprise Linux RHEL Installation with Kickstart Placeholder", 
     "revision": "145c6dc54454"
 }
