@@ -9,5 +9,5 @@
     "osCredKey": "kickstartedlinuxuserroot", 
     "serverKey": "kickstartednode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
-    "unpack": false
+    "unpack": true
 }

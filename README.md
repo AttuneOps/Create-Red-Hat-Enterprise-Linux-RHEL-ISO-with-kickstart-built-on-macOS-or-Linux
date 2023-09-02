@@ -9,15 +9,27 @@
 
 # Kickstart RHEL Redhat Enterprise Linux
 
-As the demands of modern IT infrastructure grow, the need for 
-efficient and standardized methods of operating system deployment 
-becomes increasingly important. 
+As the demands of modern digital infrastructure grow, the need for 
+efficient and standardised methods of operating system deployment 
+becomes increasingly important.
 
 The Kickstart method is a powerful tool that allows system 
 administrators to automate the installation of Red Hat Enterprise 
 Linux (RHEL) on multiple machines.
 
 This Attune Project contains Blueprints to create RHEL Kickstart ISOs.
+
+## About Red Hat Enterprise Linux
+
+RHEL stands as a commercial Linux distribution meticulously crafted by Red 
+Hat to cater to the business sector. This versatile operating system comes in 
+server editions designed for various architectures, including x86-64, Power 
+ISA, ARM64, and IBM Z, as well as a desktop edition tailored for x86-64 
+systems. The development and innovation for RHEL draw inspiration from Fedora 
+Linux and CentOS Stream, which serve as its primary sources for new features 
+and enhancements. Red Hat places its paramount emphasis on providing 
+comprehensive support, training, and certification programs exclusively 
+centered around the RHEL platform.
 
 ## Understanding Kickstart Automation
 
@@ -96,35 +108,168 @@ This Project contains the following Blueprints.
 
 
 
-### Clean Build Files - Group
-
-Deletes the build files and kickstart ISO group step.
-
-### Create RHEL7 BIOS Kickstart ISO
-
-Creates a RHEL7 kickstart ISO.
-
-### Create RHEL7 UEFI Kickstart ISO
-
-Creates a RHEL7 UEFI kickstart ISO.
-
-### Create RHEL8 BIOS Kickstart ISO
-
-Creates a RHEL8 BIOS kickstart ISO. Test
-
 ### Create RHEL8 UEFI Kickstart ISO
 
-Creates a RHEL8 UEFI kickstart ISO.
+This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
+UEFI Kickstart ISO is a powerful tool that streamlines and simplifies the 
+process of generating customized bootable ISO images for RHEL installations. 
+This blueprint automates the creation of UEFI-compatible ISOs, ensuring 
+compatibility with modern hardware and systems.
 
-### Create RHEL9 BIOS Kickstart ISO
+With this solution, users can effortlessly tailor their RHEL installations 
+to meet specific requirements, such as pre-configured settings, software 
+packages, and system configurations. It provides a seamless and efficient way 
+to deploy RHEL8 across a wide range of hardware environments, making it ideal 
+for system administrators and IT professionals who seek to automate and 
+standardise their deployment processes.
 
-Creates a RHEL9 BIOS kickstart ISO.
+Attune's automated blueprint for RHEL UEFI Kickstart ISOs empowers users to 
+save time and effort while maintaining consistency and reliability in their 
+Linux deployments, ultimately enhancing productivity and system management 
+capabilities.
 
 ### Create RHEL9 UEFI Kickstart ISO
 
+This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
+UEFI Kickstart ISO is a powerful tool that streamlines and simplifies the 
+process of generating customized bootable ISO images for RHEL installations. 
+This blueprint automates the creation of UEFI-compatible ISOs, ensuring 
+compatibility with modern hardware and systems.
+
+With this solution, users can effortlessly tailor their RHEL installations 
+to meet specific requirements, such as pre-configured settings, software 
+packages, and system configurations. It provides a seamless and efficient way 
+to deploy RHEL8 across a wide range of hardware environments, making it ideal 
+for system administrators and IT professionals who seek to automate and 
+standardise their deployment processes.
+
+Attune's automated blueprint for RHEL UEFI Kickstart ISOs empowers users to 
+save time and effort while maintaining consistency and reliability in their 
+Linux deployments, ultimately enhancing productivity and system management 
+capabilities.
+
+### Create RHEL7 UEFI Kickstart ISO
+
+This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
+UEFI Kickstart ISO is a powerful tool that streamlines and simplifies the 
+process of generating customized bootable ISO images for RHEL installations. 
+This blueprint automates the creation of UEFI-compatible ISOs, ensuring 
+compatibility with modern hardware and systems.
+
+With this solution, users can effortlessly tailor their RHEL installations 
+to meet specific requirements, such as pre-configured settings, software 
+packages, and system configurations. It provides a seamless and efficient way 
+to deploy RHEL8 across a wide range of hardware environments, making it ideal 
+for system administrators and IT professionals who seek to automate and 
+standardise their deployment processes.
+
+Attune's automated blueprint for RHEL UEFI Kickstart ISOs empowers users to 
+save time and effort while maintaining consistency and reliability in their 
+Linux deployments, ultimately enhancing productivity and system management 
+capabilities.
+
+### Create RHEL7 BIOS Kickstart ISO
+
+This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
+BIOS Kickstart ISO is a robust tool designed to simplify the process of 
+generating custom bootable ISO images for RHEL installations, specifically 
+tailored for BIOS boot environments. This blueprint automates the creation of 
+ISOs optimized for compatibility with traditional BIOS-based systems.
+
+With this solution, users can effortlessly customize their RHEL installations 
+to meet specific requirements, including pre-configured settings, software 
+packages, and system configurations. It offers an efficient and streamlined 
+approach to deploying RHEL on a wide array of hardware platforms, making it 
+an excellent choice for system administrators and IT professionals seeking 
+automation and standardisation in their deployment processes.
+
+Attune's automated blueprint for RHEL BIOS Kickstart ISOs empowers users to 
+save valuable time and resources, ensuring consistency and reliability in 
+their Linux deployments. This enhancement in productivity and system 
+management capabilities is essential for those managing environments primarily 
+utilising BIOS-based boot configurations.
+
+### Create RHEL8 BIOS Kickstart ISO
+
+This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
+BIOS Kickstart ISO is a robust tool designed to simplify the process of 
+generating custom bootable ISO images for RHEL installations, specifically 
+tailored for BIOS boot environments. This blueprint automates the creation of 
+ISOs optimized for compatibility with traditional BIOS-based systems.
+
+With this solution, users can effortlessly customize their RHEL installations 
+to meet specific requirements, including pre-configured settings, software 
+packages, and system configurations. It offers an efficient and streamlined 
+approach to deploying RHEL on a wide array of hardware platforms, making it 
+an excellent choice for system administrators and IT professionals seeking 
+automation and standardisation in their deployment processes.
+
+Attune's automated blueprint for RHEL BIOS Kickstart ISOs empowers users to 
+save valuable time and resources, ensuring consistency and reliability in 
+their Linux deployments. This enhancement in productivity and system 
+management capabilities is essential for those managing environments primarily 
+utilising BIOS-based boot configurations.
+
+### Create RHEL9 BIOS Kickstart ISO
+
+This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
+BIOS Kickstart ISO is a robust tool designed to simplify the process of 
+generating custom bootable ISO images for RHEL installations, specifically 
+tailored for BIOS boot environments. This blueprint automates the creation of 
+ISOs optimized for compatibility with traditional BIOS-based systems.
+
+With this solution, users can effortlessly customize their RHEL installations 
+to meet specific requirements, including pre-configured settings, software 
+packages, and system configurations. It offers an efficient and streamlined 
+approach to deploying RHEL on a wide array of hardware platforms, making it 
+an excellent choice for system administrators and IT professionals seeking 
+automation and standardisation in their deployment processes.
+
+Attune's automated blueprint for RHEL BIOS Kickstart ISOs empowers users to 
+save valuable time and resources, ensuring consistency and reliability in 
+their Linux deployments. This enhancement in productivity and system 
+management capabilities is essential for those managing environments primarily 
+utilising BIOS-based boot configurations.
 
 ### Test RHEL Node
 
+This Attune Automated blueprint for Red Hat Enterprise Linux (RHEL) installation 
+testing is a versatile and efficient tool designed to streamline the process 
+of evaluating and verifying RHEL installations. This blueprint offers an 
+automated approach to thoroughly assess the reliability and functionality of 
+RHEL deployments across various hardware configurations.
+
+With this solution, users can easily initiate basic tests on RHEL 
+installations. It provides a systematic and repeatable method for identifying 
+and resolving potential issues, making it an invaluable resource for system 
+administrators and IT professionals responsible for maintaining RHEL 
+environments.
+
+Attune's automated testing blueprint enhances the quality and stability of 
+RHEL installations, promoting confidence in the reliability of these systems. 
+It accelerates troubleshooting and resolution, ultimately improving the 
+overall performance and integrity of RHEL deployments.
+
+### Clean Build Files - Group
+
+This Attune Automated blueprint for linking to other Attune Automated projects 
+is a powerful tool that streamlines project management and cleanup tasks 
+within your automation workflows. Specifically, this blueprint automates 
+the process of deleting build files and the Kickstart ISO group step, 
+facilitating a seamless integration of projects and efficient resource 
+management.
+
+By incorporating this blueprint into your automation projects, users can 
+effortlessly connect and coordinate different stages or phases of their 
+workflow. It ensures that redundant build files and unnecessary ISO groups 
+are systematically removed, optimising system resources and maintaining a 
+tidy project environment.
+
+Attune's automated linking blueprint enhances project efficiency and 
+organisation, promoting smoother collaboration among team members and 
+simplifying project maintenance. It's an indispensable asset for those seeking 
+to streamline and automate project management processes while maintaining a 
+clean and efficient project structure.
 
 
 
@@ -135,24 +280,24 @@ Creates a RHEL9 BIOS kickstart ISO.
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
 | IP Address for Ping Test | Text | `ipaddressforpingtest` |  |
-| Kickstarted Linux Node | Linux/Unix Node | `kickstartedlinuxnode` | Refers to the node being built. |
-| Kickstarted Node | Basic Node | `kickstartednode` |  |
-| Kickstart Worker Linux Node | Linux/Unix Node | `kickstartworkerlinuxnode` | Linux refers to both Linux and MacOS. |
-| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
-| Kickstarted Node Subnet | Network IPv4 Subnet | `kickstartednodesubnet` | Subnet used by the target server. |
-| Kickstart Worker Linux User | Linux/Unix Credential | `kickstartworkerlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
-| Kickstart Worker Linux User: root | Linux/Unix Credential | `kickstartworkerlinuxuserroot` | Only for Kickstart Worker Linux Node. |
-| Kickstarted Linux User: root | Linux/Unix Credential | `kickstartedlinuxuserroot` | root user for "Kickstarted Linux Node". |
-| Kickstarted Linux TimeZone | Text | `kickstartedlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
-| Kickstart Worker Base Dir | Text | `kickstartworkerbasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
-| RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
-| RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
-| RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
-| Kickstarted Linux Disk First Letter | Text | `kickstartedlinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
-| Kickstarted Linux Eject CDROM | Text | `kickstartedlinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
 | Kickstarted Boot Loader is BIOS | Text | `kickstartedbootloaderisbios` | Set as '1' for true. |
 | Kickstarted Boot Loader is UEFI | Text | `kickstartedbootloaderisuefi` | Set as '1' for true. |
+| Kickstarted Linux Disk First Letter | Text | `kickstartedlinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
+| Kickstarted Linux Eject CDROM | Text | `kickstartedlinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
+| Kickstarted Linux Node | Linux/Unix Node | `kickstartedlinuxnode` | Refers to the node being built. |
+| Kickstarted Linux TimeZone | Text | `kickstartedlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
+| Kickstarted Linux User: root | Linux/Unix Credential | `kickstartedlinuxuserroot` | root user for "Kickstarted Linux Node". |
+| Kickstarted Node | Basic Node | `kickstartednode` |  |
+| Kickstarted Node Subnet | Network IPv4 Subnet | `kickstartednodesubnet` | Subnet used by the target server. |
 | Kickstarted Operating System Name | Text | `kickstartedoperatingsystemname` | Set as:<br>"Red Hat Enterprise Linux 7",<br>"Red Hat Enterprise Linux 8", or<br>"Red Hat Enterprise Linux 9". |
+| Kickstart Worker Base Dir | Text | `kickstartworkerbasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
+| Kickstart Worker Linux Node | Linux/Unix Node | `kickstartworkerlinuxnode` | Linux refers to both Linux and MacOS. |
+| Kickstart Worker Linux User | Linux/Unix Credential | `kickstartworkerlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
+| Kickstart Worker Linux User: root | Linux/Unix Credential | `kickstartworkerlinuxuserroot` | Only for Kickstart Worker Linux Node. |
+| RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
+| RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
 
 
 
@@ -173,7 +318,7 @@ Creates a RHEL9 BIOS kickstart ISO.
 | RHEL9 Boot ISO | Large Archives | This file can be downloaded from the following link. You need a Redhat login.<br>https://developers.redhat.com/products/rhel/download#assembly-field-downloads-page-content-61451 |
 | RHEL9 grub.cfg Inside efiboot.img | Version Controlled Files | A modified "EFI/BOOT/grub.cfg" suitable for RHEL9 UEFI boot to be put in "images/efiboot.img". |
 | RHEL9 UEFI Kickstart Config | Version Controlled Files | RHEL9 UEFI boot files for kickstarting RHEL9. |
-| Test File | Large Archives |  |
+| Test File | Version Controlled Files |  |
 
 
 

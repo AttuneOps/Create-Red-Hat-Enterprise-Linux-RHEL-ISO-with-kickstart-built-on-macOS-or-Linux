@@ -1,11 +1,6 @@
 {
-    "externalUuid4": "5c8af5b1-e32f-47a2-b0e6-1f4fca6e9bd9", 
-    "fileName": "test.txt", 
-    "formatKey": "unknown", 
+    "externalUuid4": "4c56ad6f-f2c0-42d2-9bfe-2c42f83b8bce", 
     "key": "testfile", 
-    "md5": "d41d8cd98f00b204e9800998ecf8427e", 
     "name": "Test File", 
-    "remoteUri": null, 
-    "size": 0, 
-    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
 }

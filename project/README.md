@@ -1,12 +1,24 @@
-As the demands of modern IT infrastructure grow, the need for 
-efficient and standardized methods of operating system deployment 
-becomes increasingly important. 
+As the demands of modern digital infrastructure grow, the need for 
+efficient and standardised methods of operating system deployment 
+becomes increasingly important.
 
 The Kickstart method is a powerful tool that allows system 
 administrators to automate the installation of Red Hat Enterprise 
 Linux (RHEL) on multiple machines.
 
 This Attune Project contains Blueprints to create RHEL Kickstart ISOs.
+
+## About Red Hat Enterprise Linux
+
+RHEL stands as a commercial Linux distribution meticulously crafted by Red 
+Hat to cater to the business sector. This versatile operating system comes in 
+server editions designed for various architectures, including x86-64, Power 
+ISA, ARM64, and IBM Z, as well as a desktop edition tailored for x86-64 
+systems. The development and innovation for RHEL draw inspiration from Fedora 
+Linux and CentOS Stream, which serve as its primary sources for new features 
+and enhancements. Red Hat places its paramount emphasis on providing 
+comprehensive support, training, and certification programs exclusively 
+centered around the RHEL platform.
 
 ## Understanding Kickstart Automation
 
