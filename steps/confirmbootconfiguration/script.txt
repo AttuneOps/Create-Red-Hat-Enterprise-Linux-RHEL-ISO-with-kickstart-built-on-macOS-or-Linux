@@ -3,13 +3,13 @@ cd /sys/firmware
 if ls | grep --quiet "efi"
 then
     echo "This looks like UEFI boot."
-    if [ {kickstartedBootLoaderIsUefi} != '1' ]
+    if [ {kickstartedBootLoaderIsUefi} != 'true' ]
     then
         exit 1
     fi
 else
     echo "This looks like BIOS boot."
-    if [ {kickstartedBootLoaderIsBios} != '1' ]
+    if [ {kickstartedBootLoaderIsBios} != 'true' ]
     then
         exit 1
     fi

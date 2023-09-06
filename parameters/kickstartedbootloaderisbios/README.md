@@ -1,1 +1,1 @@
-Set as '1' for true.
+Set as 'true' or 'false'.
