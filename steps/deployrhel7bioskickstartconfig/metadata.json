@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel7bioskickstartconfig", 
-    "deployPath": "{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}", 
+    "deployPath": "{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}", 
     "enabled": true, 
     "externalUuid4": "e78f998b-45ba-45be-ae5a-acc2f6047cfd", 
     "key": "deployrhel7bioskickstartconfig", 
@@ -11,27 +11,27 @@
     "makoParameters": [
         {
             "name": "linuxRootUser", 
-            "parameterKey": "kickstartedlinuxuserroot", 
+            "parameterKey": "newoslinuxuserroot", 
             "parameterType": "c.s.s.b.phv.LinOsCred"
         }, 
         {
             "name": "targetTimeZone", 
-            "parameterKey": "kickstartedlinuxtimezone", 
+            "parameterKey": "newoslinuxtimezone", 
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
             "name": "targetServer", 
-            "parameterKey": "kickstartedlinuxnode", 
+            "parameterKey": "newoslinuxnode", 
             "parameterType": "c.s.s.b.phv.LinuxServer"
         }, 
         {
             "name": "ksLinuxDiskFirstLetter", 
-            "parameterKey": "kickstartedlinuxdiskfirstletter", 
+            "parameterKey": "newoslinuxdiskfirstletter", 
             "parameterType": "c.s.s.b.phv.Text"
         }, 
         {
             "name": "dmsSubnet", 
-            "parameterKey": "kickstartednodesubnet", 
+            "parameterKey": "newosnodesubnet", 
             "parameterType": "c.s.s.b.phv.Ip4Subnet"
         }, 
         {
@@ -41,7 +41,7 @@
         }
     ], 
     "name": "Deploy RHEL7 BIOS Kickstart Config", 
-    "osCredKey": "kickstartworkerlinuxuser", 
-    "serverKey": "kickstartworkerlinuxnode", 
+    "osCredKey": "automationworkerlinuxuser", 
+    "serverKey": "automationworkerlinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
 }

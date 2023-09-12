@@ -6,8 +6,8 @@
     "externalUuid4": "c8ad27c2-27d0-47db-84c2-58655a473c1c", 
     "key": "testpushfiles", 
     "name": "Test Push Files", 
-    "osCredKey": "kickstartedlinuxuserroot", 
-    "serverKey": "kickstartednode", 
+    "osCredKey": "newoslinuxuserroot", 
+    "serverKey": "newoslinuxnode", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": true
 }

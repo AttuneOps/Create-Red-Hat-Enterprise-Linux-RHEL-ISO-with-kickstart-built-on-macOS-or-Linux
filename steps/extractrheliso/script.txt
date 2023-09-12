@@ -1,4 +1,4 @@
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
 
 if ls | grep -q rhel*iso
 then

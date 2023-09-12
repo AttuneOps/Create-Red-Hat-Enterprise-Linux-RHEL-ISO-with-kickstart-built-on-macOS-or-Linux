@@ -459,7 +459,7 @@ capabilities.</p>
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
                             </code>
                         </div>
 
@@ -478,7 +478,7 @@ ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}&quot;
+DIR=&quot;{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
@@ -486,7 +486,7 @@ else
     echo &quot;No directory to remove.&quot;
 fi
 
-ISO=&quot;{kickstartWorkerBaseDir}/kickstart_{kickstartedNode.fqn}.iso&quot;
+ISO=&quot;{automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso&quot;
 if [ -f &quot;${ISO}&quot; ]
 then
     rm -fv &quot;${ISO}&quot;
@@ -552,7 +552,7 @@ https://developers.redhat.com/products/rhel/download#assembly-field-downloads-pa
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}, relative to the home directory
+{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -604,7 +604,7 @@ https://developers.redhat.com/products/rhel/download#assembly-field-downloads-pa
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
 
 if ls | grep -q rhel*iso
 then
@@ -639,13 +639,6 @@ fi
                         </h3>
                     </div>
 
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
 
 
 
@@ -675,7 +668,7 @@ fi
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}, relative to the home directory
+{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -698,7 +691,7 @@ fi
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                <p>Copies any RPM CA Certificates from the drop in directory <code>{rpmCaCertificateDropInDirectory</code> to <code>{ksAttuneBaseDir}/build-{kickstartedNode.fqn}/cacerts</code>.</p>
+                                <p>Copies any RPM CA Certificates from the drop in directory.</p>
                             </p>
                         </div>
                     </div>
@@ -727,21 +720,22 @@ fi
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-if [ ! -d &quot;{rpmCaCertificateDropInDirectory}&quot; ]
+DIR=&quot;{newOsRpmCaCertificateDirectory}&quot;
+if [ ! -d &quot;$DIR&quot; ]
 then
-    echo &quot;{rpmCaCertificateDropInDirectory} does not exist, skipping.&quot;
+    echo &quot;$DIR does not exist, skipping.&quot;
 else
-    cd &quot;{rpmCaCertificateDropInDirectory}&quot;
+    cd &quot;$DIR&quot;
     
     NUMBER_FILES=$(ls -1q | wc -l)
     echo &quot;NUMBER_FILES=${NUMBER_FILES}&quot;
     
     if [ &quot;${NUMBER_FILES}&quot; -eq &quot;0&quot; ]
     then
-        echo &quot;No files in {rpmCaCertificateDropInDirectory}, skipping.&quot;
+        echo &quot;No files in $DIR, skipping.&quot;
     else
-        echo &quot;{rpmCaCertificateDropInDirectory} exists, copying it&#x27;s contents to {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/cacerts.&quot;
-        cp --verbose --recursive ./* &quot;{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/cacerts&quot;
+        echo &quot;$DIR exists, copying it&#x27;s contents to {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts.&quot;
+        cp --verbose --recursive ./* &quot;{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts&quot;
     fi
 fi
                 </code>
@@ -826,7 +820,7 @@ fi
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
 mkdir temporary_mount
                 </code>
             </pre>
@@ -852,9 +846,9 @@ mkdir temporary_mount
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                <p>The unique directory <code>{ksAttuneBaseDir}/build-{targetServer.fqn}/temporary_mount</code> is a temporary mount for <code>images/efiboot.img</code>.</p>
+                                <p>Create a unique temporary mount for the <code>efiboot.img</code>.</p>
 <p>The decision to mount to a unique directory instead of <code>/mnt</code> 
-is so that multiple kickstarts can be run simultaneously.</p>
+is so that multiple jobs can be run simultaneously.</p>
                             </p>
                         </div>
                     </div>
@@ -875,7 +869,7 @@ is so that multiple kickstarts can be run simultaneously.</p>
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartworkerlinuxuserroot}@{kickstartworkerlinuxnode}
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
                             </code>
                         </div>
 
@@ -894,13 +888,13 @@ ssh {kickstartworkerlinuxuserroot}@{kickstartworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
 
-mount --options loop,gid={kickstartWorkerLinuxUser.user},uid={kickstartWorkerLinuxUser.user} ./images/efiboot.img ./temporary_mount
+mount --options loop,gid={automationWorkerLinuxUser.user},uid={automationWorkerLinuxUser.user} ./images/efiboot.img ./temporary_mount
 
 ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
 
-echo &quot;Here are the contents of {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/temporary_mount/EFI/BOOT/grub.cfg&quot;
+echo &quot;Here are the contents of {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/temporary_mount/EFI/BOOT/grub.cfg&quot;
 cat ./temporary_mount/EFI/BOOT/grub.cfg
                 </code>
             </pre>
@@ -947,7 +941,7 @@ cat ./temporary_mount/EFI/BOOT/grub.cfg
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
                             </code>
                         </div>
 
@@ -971,7 +965,7 @@ ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/temporary_mount/EFI/BOOT, relative to the home directory
+{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/temporary_mount/EFI/BOOT, relative to the home directory
         </code>
     </div>
 
@@ -1015,7 +1009,7 @@ ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartworkerlinuxuserroot}@{kickstartworkerlinuxnode}
+ssh {automationworkerlinuxuserroot}@{automationworkerlinuxnode}
                             </code>
                         </div>
 
@@ -1034,7 +1028,7 @@ ssh {kickstartworkerlinuxuserroot}@{kickstartworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
 umount ./temporary_mount
                 </code>
             </pre>
@@ -1081,7 +1075,7 @@ umount ./temporary_mount
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
+ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
                             </code>
                         </div>
 
@@ -1100,7 +1094,7 @@ ssh {kickstartworkerlinuxuser}@{kickstartworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
 rm --verbose --recursive --force temporary_mount
                 </code>
             </pre>
@@ -1156,9 +1150,9 @@ rm --verbose --recursive --force temporary_mount
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
   
-mkisofs -o {kickstartWorkerBaseDir}/kickstart_{kickstartedNode.fqn}.iso \
+mkisofs -o {automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso \
   -joliet-long -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table  \
   -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points \
@@ -1216,7 +1210,7 @@ mkisofs -o {kickstartWorkerBaseDir}/kickstart_{kickstartedNode.fqn}.iso \
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}&quot;
+DIR=&quot;{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;

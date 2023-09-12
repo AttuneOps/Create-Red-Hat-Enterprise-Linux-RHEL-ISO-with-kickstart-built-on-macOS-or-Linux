@@ -1,9 +1,9 @@
 if ! hostnamectl | \
     grep "Operating System" | \
-    grep --quiet "{kickstartedOperatingSystemName}"
+    grep --quiet "{operatingSystemName}"
 then
-    echo "This is not {kickstartedOperatingSystemName}."
+    echo "This is not {operatingSystemName}."
     exit 1
 else
-    echo "This is {kickstartedOperatingSystemName}."
+    echo "This is {operatingSystemName}."
 fi

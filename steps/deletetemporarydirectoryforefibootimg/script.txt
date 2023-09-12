@@ -1,2 +1,2 @@
-cd {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}
+cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
 rm --verbose --recursive --force temporary_mount

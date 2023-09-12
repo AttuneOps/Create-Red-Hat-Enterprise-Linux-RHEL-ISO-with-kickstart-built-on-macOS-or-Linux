@@ -1,1 +1,0 @@
-Set 1 to eject CDROM after the kickstart installation and 0 to do nothing.

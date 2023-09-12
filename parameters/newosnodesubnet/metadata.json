@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "08ef8f6a-c516-4dc3-8543-48ee9769acba", 
+    "key": "newosnodesubnet", 
+    "name": "New OS Node Subnet", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Ip4Subnet"
+}

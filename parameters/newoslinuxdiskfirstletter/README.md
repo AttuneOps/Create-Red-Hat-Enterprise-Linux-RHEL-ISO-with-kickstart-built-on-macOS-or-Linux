@@ -1,0 +1,1 @@
+The first letter of the disk in Linux, EG, sda or xda set as 's' or 'x'.

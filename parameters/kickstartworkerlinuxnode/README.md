@@ -1,1 +1,0 @@
-Linux refers to both Linux and MacOS.

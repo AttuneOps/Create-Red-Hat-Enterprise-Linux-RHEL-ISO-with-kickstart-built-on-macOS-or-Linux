@@ -1,17 +1,18 @@
-if [ ! -d "{rpmCaCertificateDropInDirectory}" ]
+DIR="{newOsRpmCaCertificateDirectory}"
+if [ ! -d "$DIR" ]
 then
-    echo "{rpmCaCertificateDropInDirectory} does not exist, skipping."
+    echo "$DIR does not exist, skipping."
 else
-    cd "{rpmCaCertificateDropInDirectory}"
+    cd "$DIR"
     
     NUMBER_FILES=$(ls -1q | wc -l)
     echo "NUMBER_FILES=${NUMBER_FILES}"
     
     if [ "${NUMBER_FILES}" -eq "0" ]
     then
-        echo "No files in {rpmCaCertificateDropInDirectory}, skipping."
+        echo "No files in $DIR, skipping."
     else
-        echo "{rpmCaCertificateDropInDirectory} exists, copying it's contents to {kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/cacerts."
-        cp --verbose --recursive ./* "{kickstartWorkerBaseDir}/build-{kickstartedNode.fqn}/cacerts"
+        echo "$DIR exists, copying it's contents to {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts."
+        cp --verbose --recursive ./* "{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts"
     fi
 fi

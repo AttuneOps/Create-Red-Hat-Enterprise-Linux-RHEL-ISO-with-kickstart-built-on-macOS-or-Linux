@@ -401,7 +401,7 @@ overall performance and integrity of RHEL deployments.</p>
                         </div>
                         <div class="row py-1">
                             <code class="language-sql">
-ssh {kickstartedlinuxuserroot}@{kickstartedlinuxnode}
+ssh {newoslinuxuserroot}@{newoslinuxnode}
                             </code>
                         </div>
 
@@ -458,8 +458,7 @@ echo &quot;hi&quot;
 
 
 
-
-
+    
 
     
 
@@ -516,18 +515,7 @@ echo &quot;hi&quot;
 
 
 
-
-                        <div class="row">
-                            <p>
-                                Connect via ssh:
-                            </p>
-                        </div>
-                        <div class="row py-1">
-                            <code class="language-sql">
-ssh {kickstartedlinuxuserroot}@{kickstartedlinuxnode}
-                            </code>
-                        </div>
-
+    
 
 
     
@@ -613,13 +601,13 @@ cd /sys/firmware
 if ls | grep --quiet &quot;efi&quot;
 then
     echo &quot;This looks like UEFI boot.&quot;
-    if [ {kickstartedBootLoaderIsUefi} != &#x27;true&#x27; ]
+    if [ {newOsBootLoaderIsUefi} != &#x27;true&#x27; ]
     then
         exit 1
     fi
 else
     echo &quot;This looks like BIOS boot.&quot;
-    if [ {kickstartedBootLoaderIsBios} != &#x27;true&#x27; ]
+    if [ {newOsBootLoaderIsBios} != &#x27;true&#x27; ]
     then
         exit 1
     fi
@@ -645,13 +633,6 @@ fi
                         </h3>
                     </div>
 
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                
-                            </p>
-                        </div>
-                    </div>
 
 
 
@@ -677,7 +658,7 @@ fi
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-ping -c 1 &quot;{ipAddressForPingTest}&quot;
+ping -c 1 &quot;{newOsNodeSubnet.gateway}&quot;
 
 if [ ! $? -eq &quot;0&quot; ]
 then
@@ -739,12 +720,12 @@ fi
                 <code class="language-sql py-0">
 if ! hostnamectl | \
     grep &quot;Operating System&quot; | \
-    grep --quiet &quot;{kickstartedOperatingSystemName}&quot;
+    grep --quiet &quot;{operatingSystemName}&quot;
 then
-    echo &quot;This is not {kickstartedOperatingSystemName}.&quot;
+    echo &quot;This is not {operatingSystemName}.&quot;
     exit 1
 else
-    echo &quot;This is {kickstartedOperatingSystemName}.&quot;
+    echo &quot;This is {operatingSystemName}.&quot;
 fi
                 </code>
             </pre>

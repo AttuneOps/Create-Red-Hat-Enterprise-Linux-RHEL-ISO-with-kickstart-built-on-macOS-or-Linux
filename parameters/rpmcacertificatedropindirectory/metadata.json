@@ -1,7 +1,0 @@
-{
-    "externalUuid4": "a92dcd25-3756-4f0b-b8dc-a3c00a0a9307", 
-    "key": "rpmcacertificatedropindirectory", 
-    "name": "RPM CA Certificate Drop In Directory", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.Text"
-}

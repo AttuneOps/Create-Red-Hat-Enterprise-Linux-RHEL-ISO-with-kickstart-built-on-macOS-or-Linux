@@ -1,1 +1,1 @@
-Copies any RPM CA Certificates from the drop in directory `{rpmCaCertificateDropInDirectory` to `{ksAttuneBaseDir}/build-{kickstartedNode.fqn}/cacerts`.
+Copies any RPM CA Certificates from the drop in directory.

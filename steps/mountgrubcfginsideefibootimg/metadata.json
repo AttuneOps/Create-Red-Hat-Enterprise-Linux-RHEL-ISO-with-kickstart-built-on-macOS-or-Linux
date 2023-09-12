@@ -5,8 +5,8 @@
     "interpreter": 1, 
     "key": "mountgrubcfginsideefibootimg", 
     "name": "Mount grub.cfg inside efiboot.img", 
-    "osCredKey": "kickstartworkerlinuxuserroot", 
-    "serverKey": "kickstartworkerlinuxnode", 
+    "osCredKey": "automationworkerlinuxuserroot", 
+    "serverKey": "automationworkerlinuxnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
 }

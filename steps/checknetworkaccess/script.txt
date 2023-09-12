@@ -1,4 +1,4 @@
-ping -c 1 "{ipAddressForPingTest}"
+ping -c 1 "{newOsNodeSubnet.gateway}"
 
 if [ ! $? -eq "0" ]
 then

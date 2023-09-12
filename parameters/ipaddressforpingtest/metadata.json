@@ -1,7 +1,0 @@
-{
-    "externalUuid4": "1d6fd0e2-d245-4d5d-b153-b8b2ca4d1258", 
-    "key": "ipaddressforpingtest", 
-    "name": "IP Address for Ping Test", 
-    "showInPlan": true, 
-    "type": "c.s.s.b.phv.Text"
-}

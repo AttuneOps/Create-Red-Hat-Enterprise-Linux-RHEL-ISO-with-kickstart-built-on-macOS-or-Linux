@@ -108,27 +108,6 @@ This Project contains the following Blueprints.
 
 
 
-### Clean Build Files - Group
-
-This Attune Automated blueprint for linking to other Attune Automated projects 
-is a powerful tool that streamlines project management and cleanup tasks 
-within your automation workflows. Specifically, this blueprint automates 
-the process of deleting build files and the Kickstart ISO group step, 
-facilitating a seamless integration of projects and efficient resource 
-management.
-
-By incorporating this blueprint into your automation projects, users can 
-effortlessly connect and coordinate different stages or phases of their 
-workflow. It ensures that redundant build files and unnecessary ISO groups 
-are systematically removed, optimising system resources and maintaining a 
-tidy project environment.
-
-Attune's automated linking blueprint enhances project efficiency and 
-organisation, promoting smoother collaboration among team members and 
-simplifying project maintenance. It's an indispensable asset for those seeking 
-to streamline and automate project management processes while maintaining a 
-clean and efficient project structure.
-
 ### Create RHEL7 BIOS Kickstart ISO
 
 This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
@@ -271,6 +250,27 @@ RHEL installations, promoting confidence in the reliability of these systems.
 It accelerates troubleshooting and resolution, ultimately improving the 
 overall performance and integrity of RHEL deployments.
 
+### Perform Build Files Cleanup
+
+This Attune Automated blueprint for linking to other Attune Automated projects 
+is a powerful tool that streamlines project management and cleanup tasks 
+within your automation workflows. Specifically, this blueprint automates 
+the process of deleting build files and the Kickstart ISO group step, 
+facilitating a seamless integration of projects and efficient resource 
+management.
+
+By incorporating this blueprint into your automation projects, users can 
+effortlessly connect and coordinate different stages or phases of their 
+workflow. It ensures that redundant build files and unnecessary ISO groups 
+are systematically removed, optimising system resources and maintaining a 
+tidy project environment.
+
+Attune's automated linking blueprint enhances project efficiency and 
+organisation, promoting smoother collaboration among team members and 
+simplifying project maintenance. It's an indispensable asset for those seeking 
+to streamline and automate project management processes while maintaining a 
+clean and efficient project structure.
+
 
 
 
@@ -279,25 +279,23 @@ overall performance and integrity of RHEL deployments.
 
 | Name | Type | Script Reference | Comment |
 | ---- | ---- | ---------------- | ------- |
-| IP Address for Ping Test | Text | `ipaddressforpingtest` |  |
-| Kickstarted Linux Disk First Letter | Text | `kickstartedlinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda |
-| Kickstarted Linux Eject CDROM | Text | `kickstartedlinuxejectcdrom` | Set 1 to eject CDROM after the kickstart installation and 0 to do nothing. |
-| Kickstarted Linux Node | Linux/Unix Node | `kickstartedlinuxnode` | Refers to the node being built. |
-| Kickstarted Linux TimeZone | Text | `kickstartedlinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
-| Kickstarted Linux User: root | Linux/Unix Credential | `kickstartedlinuxuserroot` | root user for "Kickstarted Linux Node". |
-| Kickstarted Node | Basic Node | `kickstartednode` |  |
-| Kickstarted Node Subnet | Network IPv4 Subnet | `kickstartednodesubnet` | Subnet used by the target server. |
-| Kickstarted Operating System Name | Text | `kickstartedoperatingsystemname` | Set as:<br>"Red Hat Enterprise Linux 7",<br>"Red Hat Enterprise Linux 8", or<br>"Red Hat Enterprise Linux 9". |
-| Kickstart Worker Base Dir | Text | `kickstartworkerbasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
-| Kickstart Worker Linux Node | Linux/Unix Node | `kickstartworkerlinuxnode` | Linux refers to both Linux and MacOS. |
-| Kickstart Worker Linux User | Linux/Unix Credential | `kickstartworkerlinuxuser` | The user credentials for the node building the kickstart ISO.<br>Only for Kickstart Worker Linux Node. |
-| Kickstart Worker Linux User: root | Linux/Unix Credential | `kickstartworkerlinuxuserroot` | Only for Kickstart Worker Linux Node. |
 | RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
 | RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
 | RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
-| RPM CA Certificate Drop In Directory | Text | `rpmcacertificatedropindirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. <br><br>If it does not exist or if it is empty, then it will not be used. |
-| Kickstarted Boot Loader is UEFI | Text | `kickstartedbootloaderisuefi` | Set as 'true' or 'false'. |
-| Kickstarted Boot Loader is BIOS | Text | `kickstartedbootloaderisbios` | Set as 'true' or 'false'. |
+| New OS Node Subnet | Network IPv4 Subnet | `newosnodesubnet` | Subnet used by the new operating system to be built. |
+| Automation Worker Linux User: root | Linux/Unix Credential | `automationworkerlinuxuserroot` | root user on the Automation Worker node. |
+| Automation Worker Linux User | Linux/Unix Credential | `automationworkerlinuxuser` | non privilege user on the Automation Worker node. |
+| New OS Linux User: root | Linux/Unix Credential | `newoslinuxuserroot` | root user on the New OS to be built. |
+| Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The device used to perform tasks to create the ISO. |
+| New OS Linux Node | Linux/Unix Node | `newoslinuxnode` | The New OS to be built. |
+| Automation Worker Base Dir | Text | `automationworkerbasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
+| New OS Boot Loader is BIOS | Text | `newosbootloaderisbios` | Set as 'true' or 'false'. |
+| New OS Boot Loader is UEFI | Text | `newosbootloaderisuefi` | Set as 'true' or 'false'. |
+| New OS Linux Disk First Letter | Text | `newoslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda set as 's' or 'x'. |
+| New OS Linux Eject CDROM | Text | `newoslinuxejectcdrom` | Set 'true' to eject CDROM after the kickstart installation and 'false' to do nothing. |
+| New OS Linux TimeZone | Text | `newoslinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
+| New OS RPM CA Certificate Directory | Text | `newosrpmcacertificatedirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. If it does not exist or if it is empty, then it will not be used. |
+| Operating System Name | Text | `operatingsystemname` | Set as:<br>"Red Hat Enterprise Linux 7",<br>"Red Hat Enterprise Linux 8", or<br>"Red Hat Enterprise Linux 9". |
 
 
 

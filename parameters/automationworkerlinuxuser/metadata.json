@@ -1,0 +1,7 @@
+{
+    "externalUuid4": "84f9c06d-b1c5-4d6b-9a4f-cf60541e8d8b", 
+    "key": "automationworkerlinuxuser", 
+    "name": "Automation Worker Linux User", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinOsCred"
+}

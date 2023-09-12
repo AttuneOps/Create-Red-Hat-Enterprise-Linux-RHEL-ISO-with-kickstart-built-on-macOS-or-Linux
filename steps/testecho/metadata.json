@@ -5,8 +5,8 @@
     "interpreter": 1, 
     "key": "testecho", 
     "name": "Test Echo", 
-    "osCredKey": "kickstartedlinuxuserroot", 
-    "serverKey": "kickstartedlinuxnode", 
+    "osCredKey": "newoslinuxuserroot", 
+    "serverKey": "newoslinuxnode", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
 }
