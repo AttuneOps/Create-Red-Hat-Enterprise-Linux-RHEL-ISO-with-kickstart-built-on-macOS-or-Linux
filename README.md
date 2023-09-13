@@ -19,6 +19,8 @@ Linux (RHEL) on multiple machines.
 
 This Attune Project contains Blueprints to create RHEL Kickstart ISOs.
 
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
 ## About Red Hat Enterprise Linux
 
 RHEL stands as a commercial Linux distribution meticulously crafted by Red 
@@ -63,7 +65,6 @@ errors by following a predefined script.
 4. **Standardisation:** Kickstart promotes standardized 
 configurations across the organization, simplifying management and 
 troubleshooting.
-
 
 
 
@@ -129,6 +130,9 @@ their Linux deployments. This enhancement in productivity and system
 management capabilities is essential for those managing environments primarily 
 utilising BIOS-based boot configurations.
 
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
+
 ### Create RHEL7 UEFI Kickstart ISO
 
 This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
@@ -148,6 +152,9 @@ Attune's automated blueprint for RHEL UEFI Kickstart ISOs empowers users to
 save time and effort while maintaining consistency and reliability in their 
 Linux deployments, ultimately enhancing productivity and system management 
 capabilities.
+
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
 
 ### Create RHEL8 BIOS Kickstart ISO
 
@@ -170,6 +177,9 @@ their Linux deployments. This enhancement in productivity and system
 management capabilities is essential for those managing environments primarily 
 utilising BIOS-based boot configurations.
 
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
+
 ### Create RHEL8 UEFI Kickstart ISO
 
 This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
@@ -189,6 +199,9 @@ Attune's automated blueprint for RHEL UEFI Kickstart ISOs empowers users to
 save time and effort while maintaining consistency and reliability in their 
 Linux deployments, ultimately enhancing productivity and system management 
 capabilities.
+
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
 
 ### Create RHEL9 BIOS Kickstart ISO
 
@@ -211,6 +224,9 @@ their Linux deployments. This enhancement in productivity and system
 management capabilities is essential for those managing environments primarily 
 utilising BIOS-based boot configurations.
 
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
+
 ### Create RHEL9 UEFI Kickstart ISO
 
 This Attune Automated blueprint for creating an Red Hat Enterprise Linux (RHEL) 
@@ -231,24 +247,8 @@ save time and effort while maintaining consistency and reliability in their
 Linux deployments, ultimately enhancing productivity and system management 
 capabilities.
 
-### Test RHEL Node
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
 
-This Attune Automated blueprint for Red Hat Enterprise Linux (RHEL) installation 
-testing is a versatile and efficient tool designed to streamline the process 
-of evaluating and verifying RHEL installations. This blueprint offers an 
-automated approach to thoroughly assess the reliability and functionality of 
-RHEL deployments across various hardware configurations.
-
-With this solution, users can easily initiate basic tests on RHEL 
-installations. It provides a systematic and repeatable method for identifying 
-and resolving potential issues, making it an invaluable resource for system 
-administrators and IT professionals responsible for maintaining RHEL 
-environments.
-
-Attune's automated testing blueprint enhances the quality and stability of 
-RHEL installations, promoting confidence in the reliability of these systems. 
-It accelerates troubleshooting and resolution, ultimately improving the 
-overall performance and integrity of RHEL deployments.
 
 ### Perform Build Files Cleanup
 
@@ -271,6 +271,31 @@ simplifying project maintenance. It's an indispensable asset for those seeking
 to streamline and automate project management processes while maintaining a 
 clean and efficient project structure.
 
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
+
+### Test RHEL Node
+
+This Attune Automated blueprint for Red Hat Enterprise Linux (RHEL) installation 
+testing is a versatile and efficient tool designed to streamline the process 
+of evaluating and verifying RHEL installations. This blueprint offers an 
+automated approach to thoroughly assess the reliability and functionality of 
+RHEL deployments across various hardware configurations.
+
+With this solution, users can easily initiate basic tests on RHEL 
+installations. It provides a systematic and repeatable method for identifying 
+and resolving potential issues, making it an invaluable resource for system 
+administrators and IT professionals responsible for maintaining RHEL 
+environments.
+
+Attune's automated testing blueprint enhances the quality and stability of 
+RHEL installations, promoting confidence in the reliability of these systems. 
+It accelerates troubleshooting and resolution, ultimately improving the 
+overall performance and integrity of RHEL deployments.
+
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
+
 
 
 
@@ -288,7 +313,6 @@ clean and efficient project structure.
 | New OS Linux User: root | Linux/Unix Credential | `newoslinuxuserroot` | root user on the New OS to be built. |
 | Automation Worker Linux Node | Linux/Unix Node | `automationworkerlinuxnode` | The device used to perform tasks to create the ISO. |
 | New OS Linux Node | Linux/Unix Node | `newoslinuxnode` | The New OS to be built. |
-| Automation Worker Base Dir | Text | `automationworkerbasedir` | Base directory for deploying temporary files to build the kickstart ISO. |
 | New OS Boot Loader is BIOS | Text | `newosbootloaderisbios` | Set as 'true' or 'false'. |
 | New OS Boot Loader is UEFI | Text | `newosbootloaderisuefi` | Set as 'true' or 'false'. |
 | New OS Linux Disk First Letter | Text | `newoslinuxdiskfirstletter` | The first letter of the disk in Linux, EG, sda or xda set as 's' or 'x'. |
@@ -296,6 +320,7 @@ clean and efficient project structure.
 | New OS Linux TimeZone | Text | `newoslinuxtimezone` | Valid Linux timezones are listed in /usr/share/zoneinfo/posix and also at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.<br><br>Example: Australia/Brisbane |
 | New OS RPM CA Certificate Directory | Text | `newosrpmcacertificatedirectory` | RPM CA Certificate drop In directory. Place all RPM CA certificates that you want to use here.<br><br>This is an absolute path to a folder. If it does not exist or if it is empty, then it will not be used. |
 | Operating System Name | Text | `operatingsystemname` | Set as:<br>"Red Hat Enterprise Linux 7",<br>"Red Hat Enterprise Linux 8", or<br>"Red Hat Enterprise Linux 9". |
+| Automation Worker Base Directory | Text | `automationworkerbasedirectory` | Base directory for deploying temporary files to build the kickstart ISO. |
 
 
 

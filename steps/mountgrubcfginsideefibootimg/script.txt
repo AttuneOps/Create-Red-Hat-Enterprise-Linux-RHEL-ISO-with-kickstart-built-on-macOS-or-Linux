@@ -1,8 +1,8 @@
-cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
+cd {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}
 
 mount --options loop,gid={automationWorkerLinuxUser.user},uid={automationWorkerLinuxUser.user} ./images/efiboot.img ./temporary_mount
 
 ls -lh ./temporary_mount/EFI/BOOT/grub.cfg
 
-echo "Here are the contents of {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/temporary_mount/EFI/BOOT/grub.cfg"
+echo "Here are the contents of {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}/temporary_mount/EFI/BOOT/grub.cfg"
 cat ./temporary_mount/EFI/BOOT/grub.cfg

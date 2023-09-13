@@ -12,7 +12,7 @@ else
     then
         echo "No files in $DIR, skipping."
     else
-        echo "$DIR exists, copying it's contents to {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts."
-        cp --verbose --recursive ./* "{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts"
+        echo "$DIR exists, copying it's contents to {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}/cacerts."
+        cp --verbose --recursive ./* "{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}/cacerts"
     fi
 fi

@@ -1,4 +1,4 @@
-DIR="{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}"
+DIR="{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}"
 if [ -d "${DIR}" ]
 then
     rm -rf "${DIR}" && echo "Removed ${DIR}"
@@ -6,7 +6,7 @@ else
     echo "No directory to remove."
 fi
 
-ISO="{automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso"
+ISO="{automationWorkerBaseDirectory}/kickstart_{newOsLinuxNode.fqn}.iso"
 if [ -f "${ISO}" ]
 then
     rm -fv "${ISO}"

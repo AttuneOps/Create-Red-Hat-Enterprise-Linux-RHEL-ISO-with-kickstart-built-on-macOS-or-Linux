@@ -1,6 +1,6 @@
-cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
+cd {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}
 
-mkisofs -o {automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso \
+mkisofs -o {automationWorkerBaseDirectory}/kickstart_{newOsLinuxNode.fqn}.iso \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V "KS_RHEL" .
 

@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel9uefikickstartconfig", 
-    "deployPath": "{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}", 
+    "deployPath": "{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}", 
     "enabled": true, 
     "externalUuid4": "6cb8a544-7f98-4f7a-a88c-d592e76f0255", 
     "key": "deployrhel9uefikickstartconfig", 

@@ -170,6 +170,7 @@ organisation, promoting smoother collaboration among team members and
 simplifying project maintenance. It's an indispensable asset for those seeking 
 to streamline and automate project management processes while maintaining a 
 clean and efficient project structure.</p>
+<p><a href="https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git">Clone this Project from GitHub</a></p>
             </p>
         </div>
     </div>
@@ -385,7 +386,7 @@ ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}&quot;
+DIR=&quot;{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
@@ -393,7 +394,7 @@ else
     echo &quot;No directory to remove.&quot;
 fi
 
-ISO=&quot;{automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso&quot;
+ISO=&quot;{automationWorkerBaseDirectory}/kickstart_{newOsLinuxNode.fqn}.iso&quot;
 if [ -f &quot;${ISO}&quot; ]
 then
     rm -fv &quot;${ISO}&quot;

@@ -1,2 +1,2 @@
-cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
+cd {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}
 rm --verbose --recursive --force temporary_mount

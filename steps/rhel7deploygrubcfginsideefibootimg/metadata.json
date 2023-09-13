@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": null, 
     "archiveKey": "rhel7grubcfginsideefibootimg", 
-    "deployPath": "{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/temporary_mount/EFI/BOOT", 
+    "deployPath": "{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}/temporary_mount/EFI/BOOT", 
     "enabled": true, 
     "externalUuid4": "96699a08-eca3-4f7d-b2be-4bab3a8e5217", 
     "key": "rhel7deploygrubcfginsideefibootimg", 

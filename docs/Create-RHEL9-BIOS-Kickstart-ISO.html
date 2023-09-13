@@ -167,6 +167,7 @@ save valuable time and resources, ensuring consistency and reliability in
 their Linux deployments. This enhancement in productivity and system 
 management capabilities is essential for those managing environments primarily 
 utilising BIOS-based boot configurations.</p>
+<p><a href="https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git">Clone this Project from GitHub</a></p>
             </p>
         </div>
     </div>
@@ -430,7 +431,7 @@ ssh {automationworkerlinuxuser}@{automationworkerlinuxnode}
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}&quot;
+DIR=&quot;{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
@@ -438,7 +439,7 @@ else
     echo &quot;No directory to remove.&quot;
 fi
 
-ISO=&quot;{automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso&quot;
+ISO=&quot;{automationWorkerBaseDirectory}/kickstart_{newOsLinuxNode.fqn}.iso&quot;
 if [ -f &quot;${ISO}&quot; ]
 then
     rm -fv &quot;${ISO}&quot;
@@ -504,7 +505,7 @@ https://developers.redhat.com/products/rhel/download#assembly-field-downloads-pa
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}, relative to the home directory
+{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -556,7 +557,7 @@ https://developers.redhat.com/products/rhel/download#assembly-field-downloads-pa
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
+cd {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}
 
 if ls | grep -q rhel*iso
 then
@@ -627,7 +628,7 @@ fi
     </div>
     <div class="row py-1">
         <code class="language-bash">
-{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}, relative to the home directory
+{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}, relative to the home directory
         </code>
     </div>
 
@@ -693,8 +694,8 @@ else
     then
         echo &quot;No files in $DIR, skipping.&quot;
     else
-        echo &quot;$DIR exists, copying it&#x27;s contents to {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts.&quot;
-        cp --verbose --recursive ./* &quot;{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}/cacerts&quot;
+        echo &quot;$DIR exists, copying it&#x27;s contents to {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}/cacerts.&quot;
+        cp --verbose --recursive ./* &quot;{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}/cacerts&quot;
     fi
 fi
                 </code>
@@ -750,9 +751,9 @@ fi
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-cd {automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}
+cd {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}
 
-mkisofs -o {automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso \
+mkisofs -o {automationWorkerBaseDirectory}/kickstart_{newOsLinuxNode.fqn}.iso \
   -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V &quot;KS_RHEL&quot; .
                 </code>
@@ -808,7 +809,7 @@ mkisofs -o {automationWorkerBaseDir}/kickstart_{newOsLinuxNode.fqn}.iso \
         <div class="col px-0">
             <pre>
                 <code class="language-sql py-0">
-DIR=&quot;{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}&quot;
+DIR=&quot;{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}&quot;
 if [ -d &quot;${DIR}&quot; ]
 then
     rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;

@@ -1,4 +1,4 @@
-DIR="{automationWorkerBaseDir}/build-{newOsLinuxNode.fqn}"
+DIR="{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}"
 if [ -d "${DIR}" ]
 then
     rm -rf "${DIR}" && echo "Removed ${DIR}"

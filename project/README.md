@@ -8,6 +8,8 @@ Linux (RHEL) on multiple machines.
 
 This Attune Project contains Blueprints to create RHEL Kickstart ISOs.
 
+[Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
+
 ## About Red Hat Enterprise Linux
 
 RHEL stands as a commercial Linux distribution meticulously crafted by Red 
