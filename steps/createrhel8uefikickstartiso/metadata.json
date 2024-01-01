@@ -33,10 +33,6 @@
         {
             "order": 300, 
             "stepKey": "createuefibootiso"
-        }, 
-        {
-            "order": 350, 
-            "stepKey": "deletebuilddirectory"
         }
     ], 
     "name": "Create RHEL8 UEFI Kickstart ISO", 

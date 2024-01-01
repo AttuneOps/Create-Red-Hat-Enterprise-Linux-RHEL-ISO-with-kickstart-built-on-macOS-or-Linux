@@ -1,5 +1,5 @@
 cd {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}
-
+  
 mkisofs -o {automationWorkerBaseDirectory}/kickstart_{newOsLinuxNode.fqn}.iso \
   -joliet-long -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table  \

@@ -331,14 +331,6 @@ capabilities.</p>
                         </a>
                     </p>
 
-        
-
-                    <p class="text-muted pt-2">
-                        <a href="#deletebuilddirectory">
-                            <strong>Step 8 -</strong> Delete Build Directory
-                        </a>
-                    </p>
-
 
                 </div>
             </div>
@@ -1130,7 +1122,7 @@ rm --verbose --recursive --force temporary_mount
                     <div class="row">
                         <div class="description col px-0">
                             <p>
-                                <p>Creates a UEFI bootable ISO containing the kickstart files.</p>
+                                
                             </p>
                         </div>
                     </div>
@@ -1160,72 +1152,12 @@ rm --verbose --recursive --force temporary_mount
             <pre>
                 <code class="language-sql py-0">
 cd {automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}
-  
+
 mkisofs -o {automationWorkerBaseDirectory}/kickstart_{newOsLinuxNode.fqn}.iso \
   -joliet-long -b isolinux/isolinux.bin -c isolinux/boot.cat \
   -no-emul-boot -boot-load-size 4 -boot-info-table  \
   -eltorito-alt-boot -e images/efiboot.img -no-emul-boot -graft-points \
   -R -J -v -T -V &quot;KS_RHEL&quot; .
-                </code>
-            </pre>
-        </div>
-    </div>
-
-
-
-
-
-        
-
-
-
-                    <div class="row pt-5">
-                        <h3 id="deletebuilddirectory">
-                            <a href="#deletebuilddirectory">
-                                <strong>Step 8 -</strong> Delete Build Directory
-                            </a>
-                        </h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="description col px-0">
-                            <p>
-                                <p>Removes the <code>{ksAttuneBaseDir}/build-{targetServer.fqn}</code> directory.</p>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    <div class="row">
-        <p>
-            Execute the following script:
-        </p>
-    </div>
-    <div class="row">
-        <div class="col px-0">
-            <pre>
-                <code class="language-sql py-0">
-DIR=&quot;{automationWorkerBaseDirectory}/build-{newOsLinuxNode.fqn}&quot;
-if [ -d &quot;${DIR}&quot; ]
-then
-    rm -rf &quot;${DIR}&quot; &amp;&amp; echo &quot;Removed ${DIR}&quot;
-else
-    echo &quot;No directory to remove.&quot;
-fi
                 </code>
             </pre>
         </div>

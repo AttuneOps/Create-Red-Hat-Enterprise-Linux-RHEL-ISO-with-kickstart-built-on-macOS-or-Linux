@@ -1,10 +1,10 @@
 {
     "actionOnStepFail": null, 
     "enabled": true, 
-    "externalUuid4": "ca05f3f1-3fed-4654-bfd4-6f7a61ba970e", 
+    "externalUuid4": "b02d4773-cfaa-4ec8-8709-875d21430424", 
     "interpreter": 1, 
-    "key": "createuefibootiso", 
-    "name": "Create UEFI Boot ISO", 
+    "key": "createuefibootisoold", 
+    "name": "Create UEFI Boot ISO OLD", 
     "osCredKey": "automationworkerlinuxuser", 
     "serverKey": "automationworkerlinuxnode", 
     "successExitCode": 0, 

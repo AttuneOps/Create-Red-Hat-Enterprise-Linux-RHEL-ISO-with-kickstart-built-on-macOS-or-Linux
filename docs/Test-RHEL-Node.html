@@ -601,13 +601,13 @@ cd /sys/firmware
 
 if ls | grep --quiet &quot;efi&quot;
 then
-    echo &quot;This looks like UEFI boot.&quot;
+    echo &quot;This is UEFI boot.&quot;
     if [ {newOsBootLoaderIsUefi} != &#x27;true&#x27; ]
     then
         exit 1
     fi
 else
-    echo &quot;This looks like BIOS boot.&quot;
+    echo &quot;This is BIOS boot.&quot;
     if [ {newOsBootLoaderIsBios} != &#x27;true&#x27; ]
     then
         exit 1
