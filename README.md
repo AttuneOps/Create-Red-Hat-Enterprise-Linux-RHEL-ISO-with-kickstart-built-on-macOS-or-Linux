@@ -296,6 +296,13 @@ overall performance and integrity of RHEL deployments.
 [Clone this Project from GitHub](https://github.com/Attune-Automation/Automate-Red-Hat-Enterprise-Linux-RHEL-Installation.git)
 
 
+### Configure your System to use a Local Mirror
+
+If your system is not registered with an entitlement server 
+like Red Hat Subscription Management but you have access to 
+a local RPM mirror, you can configure your system to use this 
+mirror for updates and installations.
+
 
 
 
@@ -321,6 +328,7 @@ overall performance and integrity of RHEL deployments.
 | RHEL7 baseos Repo URL | Text | `rhel7baseosrepourl` | RPM Server BaseOS Repository URL.<br><br>For example "http://rpm_server_for_rhel7/rpm_mirror/rhel-7-server-rpms/" |
 | RHEL8 baseos Repo URL | Text | `rhel8baseosrepourl` | RPM Server BaseOS Repository URL for RHEL8.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
 | RHEL9 baseos Repo URL | Text | `rhel9baseosrepourl` | RPM Server BaseOS Repository URL for RHEL9.<br><br>For example "http://rpm_server_for_rhel9/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
+| RHEL baseos Repo URL | Text | `rhelbaseosrepourl` | RPM Server BaseOS Repository URL for packages mirror.<br><br>For example "http://rpm_server_for_rhel8/rpm_mirror/rhel-8-for-x86_64-baseos-rpms/" |
 
 
 
@@ -329,6 +337,7 @@ overall performance and integrity of RHEL deployments.
 
 | Name | Type | Comment |
 | ---- | ---- | ------- |
+| local.repo | Version Controlled Files | The local repo configuration.<br>name: A descriptive name for your local repository.<br>baseurl: The URL where the local repository resides.<br>enabled=1: Enables the repository.<br>gpgcheck=0: Disables GPG signature checking. If your local repo's packages are signed, set this to 1 and configure the gpgkey URL. |
 | RHEL7 BIOS Kickstart Config | Version Controlled Files | https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-options |
 | RHEL7 Boot ISO | Large Archives |  |
 | RHEL7 grub.cfg Inside efiboot.img | Version Controlled Files | A modified "EFI/BOOT/grub.cfg" suitable for RHEL7 UEFI boot to be put in "images/efiboot.img". |

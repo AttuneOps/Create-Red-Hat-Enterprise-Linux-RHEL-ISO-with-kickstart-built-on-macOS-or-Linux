@@ -1,0 +1,22 @@
+{
+    "actionOnStepFail": null, 
+    "archiveKey": "localrepo", 
+    "deployPath": "/etc/yum.repos.d/", 
+    "enabled": true, 
+    "externalUuid4": "784b9b5b-e388-4621-ad1a-c98c9927f4e7", 
+    "key": "setuplocalrepository", 
+    "makoFileNames": [
+        "local.repo"
+    ], 
+    "makoParameters": [
+        {
+            "name": "rhelBaseosRepoUrl", 
+            "parameterKey": "rhelbaseosrepourl", 
+            "parameterType": "c.s.s.b.phv.Text"
+        }
+    ], 
+    "name": "Set Up Local Repository", 
+    "osCredKey": "newoslinuxuserroot", 
+    "serverKey": "newoslinuxnode", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
+}

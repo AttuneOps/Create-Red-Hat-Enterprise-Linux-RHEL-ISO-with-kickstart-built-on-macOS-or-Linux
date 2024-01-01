@@ -1,0 +1,24 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "c0cff3d0-2c3a-446b-ae79-d0f6fa30cc94", 
+    "isBlueprint": true, 
+    "key": "configureyoursystemtousealocalmirror", 
+    "links": [
+        {
+            "order": 0, 
+            "stepKey": "disableredhatsubscriptionmanagement"
+        }, 
+        {
+            "order": 50, 
+            "stepKey": "setuplocalrepository"
+        }, 
+        {
+            "order": 100, 
+            "stepKey": "cleandnfcache"
+        }
+    ], 
+    "name": "Configure your System to use a Local Mirror", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

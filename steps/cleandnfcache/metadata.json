@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": null, 
+    "enabled": true, 
+    "externalUuid4": "32e37208-b24a-4791-9b0a-52237a188fcd", 
+    "interpreter": 1, 
+    "key": "cleandnfcache", 
+    "name": "Clean DNF Cache", 
+    "osCredKey": "newoslinuxuserroot", 
+    "serverKey": "newoslinuxnode", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}
