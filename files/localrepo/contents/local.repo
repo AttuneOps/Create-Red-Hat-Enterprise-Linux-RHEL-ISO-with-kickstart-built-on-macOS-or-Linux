@@ -1,5 +1,0 @@
-[local-repo]
-name=Local Repository
-baseurl=${rhelBaseosRepoUrl}
-enabled=1
-gpgcheck=0

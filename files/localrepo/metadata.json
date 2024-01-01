@@ -1,6 +1,0 @@
-{
-    "externalUuid4": "7ebb7731-e84c-4eee-8ec0-b6dac64e84cc", 
-    "key": "localrepo", 
-    "name": "local.repo", 
-    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
-}
