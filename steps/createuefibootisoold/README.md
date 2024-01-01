@@ -1,1 +1,0 @@
-Creates a UEFI bootable ISO containing the kickstart files.

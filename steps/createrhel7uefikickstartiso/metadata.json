@@ -31,11 +31,11 @@
             "stepKey": "rhel7modifyefibootgrupcfginimagesefibootimg"
         }, 
         {
-            "order": 300, 
-            "stepKey": "createuefibootisoold"
+            "order": 350, 
+            "stepKey": "createuefibootiso"
         }, 
         {
-            "order": 350, 
+            "order": 400, 
             "stepKey": "deletebuilddirectory"
         }
     ], 
